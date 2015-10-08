@@ -68,10 +68,10 @@ vector<string> palabra;
 
  int contador =0;
  
- lee_fichero("lema.txt", Dicc); // Ojo, el vector no esta ordenado!!!
+ //lee_fichero("lema.txt", Dicc); // Ojo, el vector no esta ordenado!!!
  //cout << Dicc.size() << " " << Dicc.capacity() << endl;
  
- lee_fichero("quijote.txt", Q);
+ lee_fichero("quijote.txt", Dicc);
  //cout << Q.size() << " " << Q.capacity() << endl;
  
  
