@@ -24,11 +24,18 @@ c               = 0.434936         +/- 0.374        (85.99%)
 
 #### Codigo ocurrencias.cpp
 El algoritmo es de orden N, osea que la gráfica será lineal
+
 - Ejecutable: ocurrencias.cpp
 - Datos: ocurrenciasQuijote.dat
 
 ![Ocurrencias Quijote]
 (./images/ocurrenciasQuijote.png)
+
+Realizamos el ajuste para comprobarlo
+
+![Ajuste Ocurrencias Quijote]
+(./images/ajusteLinealOcurrencias.png)
+
 
 
 
