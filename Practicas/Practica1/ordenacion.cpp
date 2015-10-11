@@ -43,17 +43,18 @@ void lee_fichero( const char * nf, vector<string> & V) {
  final : posicion siguiente a la ultima para buscar (desde V[0] hasta V[fin-1])
  */
 void burbuja(vector<string> & T, int inicial, int final) {
-int i, j;
-string aux;
-for (i = inicial; i < final - 1; i++)
-for (j = final - 1; j > i; j--)
-if (T[j] < T[j-1]) {
-  aux = T[j];
-T[j]= T[j-1];
-T[j-1] = aux;
+	int i, j;
+	string aux;
+	for (i = inicial; i < final - 1; i++)
+		for (j = final - 1; j > i; j--)
+			if (T[j] < T[j-1]) {
+			  aux = T[j];
+		          T[j]= T[j-1];
+			  T[j-1] = aux;
+			}
+	
 }
 
-}
 
 
 int main() {

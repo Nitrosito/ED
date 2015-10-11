@@ -94,3 +94,491 @@ correlation matrix of the fit parameters:
 
                a      
 a               1.000 
+
+
+*******************************************************************************
+Sat Oct 10 11:26:13 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:26:33 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.05779e+20       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 3.38115e+09
+
+initial set of free parameter values
+
+a               = 1
+
+After 5 iterations the fit converged.
+final sum of squares of residuals : 29.0551
+rel. change during last iteration : -2.56778e-15
+
+degrees of freedom    (FIT_NDF)                        : 17
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 1.30733
+variance of residuals (reduced chisquare) = WSSR/ndf   : 1.70912
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.56147e-08      +/- 9.114e-11    (0.3558%)
+
+
+correlation matrix of the fit parameters:
+
+               a      
+a               1.000 
+
+
+*******************************************************************************
+Sat Oct 10 11:26:57 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:27:25 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:27:28 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:27:30 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:27:52 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:28:12 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:28:49 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:29:04 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:29:07 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:29:25 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+*******************************************************************************
+Sat Oct 10 11:29:27 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 2.05785e+20       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95211e+09
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+c               = 1
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 5.15238
+rel. change during last iteration : -3.06151e-13
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.586082
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.343492
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.71135e-08      +/- 2.306e-10    (0.8505%)
+b               = -0.000111545     +/- 2.036e-05    (18.25%)
+c               = 0.434936         +/- 0.374        (85.99%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.965  1.000 
+c               0.704 -0.838  1.000 
+
+
+*******************************************************************************
+Sat Oct 10 11:30:02 2015
+
+
+FIT:    data read from "burbujaQuijote.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15842.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95211e+09
+
+initial set of free parameter values
+
+a               = 2.71135e-08
+b               = -0.000111545
+c               = 0.434936
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 1.01183
+rel. change during last iteration : -1.54601e-12
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.259722
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0674556
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.65295e-08      +/- 1.022e-10    (0.6182%)
+b               = 2.43009e-05      +/- 9.02e-06     (37.12%)
+c               = -0.12136         +/- 0.1657       (136.6%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.965  1.000 
+c               0.704 -0.838  1.000 
+
+
+*******************************************************************************
+Sat Oct 10 11:36:03 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15847             delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95211e+09
+
+initial set of free parameter values
+
+a               = 1.65295e-08
+b               = 2.43009e-05
+c               = -0.12136
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 5.15238
+rel. change during last iteration : -3.03737e-13
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.586082
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.343492
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.71135e-08      +/- 2.306e-10    (0.8505%)
+b               = -0.000111545     +/- 2.036e-05    (18.25%)
+c               = 0.434936         +/- 0.374        (85.99%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.965  1.000 
+c               0.704 -0.838  1.000 
+
+
+*******************************************************************************
+Sat Oct 10 11:37:39 2015
+
+
+FIT:    data read from "burbujaDiccionario.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 5.15238           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95211e+09
+
+initial set of free parameter values
+
+a               = 2.71135e-08
+b               = -0.000111545
+c               = 0.434936
+
+The maximum lambda = 1.000000e+20 was exceeded. Fit stopped.
+final sum of squares of residuals : 5.15238
+rel. change during last iteration : 0
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.586082
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.343492
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 2.71135e-08      +/- 2.306e-10    (0.8505%)
+b               = -0.000111545     +/- 2.036e-05    (18.25%)
+c               = 0.434936         +/- 0.374        (85.99%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.965  1.000 
+c               0.704 -0.838  1.000 
+
+
+*******************************************************************************
+Sat Oct 10 11:41:12 2015
+
+
+FIT:    data read from "burbujaQuijote.dat"
+        format = z
+        #datapoints = 18
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 15842.9           delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1.95211e+09
+
+initial set of free parameter values
+
+a               = 2.71135e-08
+b               = -0.000111545
+c               = 0.434936
+
+After 13 iterations the fit converged.
+final sum of squares of residuals : 1.01183
+rel. change during last iteration : -1.53833e-12
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 0.259722
+variance of residuals (reduced chisquare) = WSSR/ndf   : 0.0674556
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 1.65295e-08      +/- 1.022e-10    (0.6182%)
+b               = 2.43009e-05      +/- 9.02e-06     (37.12%)
+c               = -0.12136         +/- 0.1657       (136.6%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      c      
+a               1.000 
+b              -0.965  1.000 
+c               0.704 -0.838  1.000 
+
+
+*******************************************************************************
+Sat Oct 10 12:28:30 2015
+
+
+FIT:    data read from "ocurrenciasQuijote.dat"
+        format = z
+        #datapoints = 17
+        residuals are weighted equally (unit weight)
+
+function used for fitting: f(x)
+fitted parameters initialized with current variable values
+
+
+
+ Iteration 0
+ WSSR        : 3.75375e+10       delta(WSSR)/WSSR   : 0
+ delta(WSSR) : 0                 limit for stopping : 1e-05
+ lambda	  : 1
+
+initial set of free parameter values
+
+a               = 1
+b               = 1
+
+After 2 iterations the fit converged.
+final sum of squares of residuals : 3.75362e+10
+rel. change during last iteration : -3.30728e-06
+
+degrees of freedom    (FIT_NDF)                        : 15
+rms of residuals      (FIT_STDFIT) = sqrt(WSSR/ndf)    : 50024.1
+variance of residuals (reduced chisquare) = WSSR/ndf   : 2.50241e+09
+
+Final set of parameters            Asymptotic Standard Error
+=======================            ==========================
+
+a               = 0.101317         +/- 2.387e+20    (2.356e+23%)
+b               = 0.101317         +/- 2.387e+20    (2.356e+23%)
+
+
+correlation matrix of the fit parameters:
+
+               a      b      
+a               1.000 
+b              -1.000  1.000 
