@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CONJUNTO de DELITOS: Fichero Fuente fecha.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CONJUNTO de DELITOS
+   &#160;<span id="projectnumber">V0</span>
+   </div>
+   <div id="projectbrief">Conjunto Ordenado de Crimenes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li class="current"><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div id="navrow2" class="tabs2">
+    <ul class="tablist">
+      <li><a href="files.html"><span>Lista&#160;de&#160;archivos</span></a></li>
+      <li><a href="globals.html"><span>Miembros&#160;de&#160;los&#160;ficheros</span></a></li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">fecha.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fecha_8h.html">Ir a la documentación de este archivo.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">/* </span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="comment"> * meteorito.h</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment"> * </span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment"> * Copyright  (C) Juan F. Huete</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#ifndef __CRIMEN_H</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __CRIMEN_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span> </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classfecha.html">   21</a></span>&#160;<span class="keyword">class </span><a class="code" href="classfecha.html">fecha</a> {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; <a class="code" href="classfecha.html#a6775ef84b5838e12e28fd341793f4539">fecha</a> (); <span class="comment">//Constructor de fecha por defecto</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; <a class="code" href="classfecha.html#a6775ef84b5838e12e28fd341793f4539">fecha</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s); <span class="comment">// s es un string con el formato mm/dd/aaaa  hh:mm:ss AM/PM</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; <a class="code" href="classfecha.html">fecha</a> &amp; <a class="code" href="classfecha.html#ac7f5398b71cbccc4cd74f8c5e56b80ce">operator=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; <a class="code" href="classfecha.html">fecha</a> &amp; <a class="code" href="classfecha.html#ac7f5398b71cbccc4cd74f8c5e56b80ce">operator=</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s); <span class="comment">// s es un string con el formato mm/dd/aaaa hh:mm:ss AM/PM</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; <span class="keywordtype">string</span> <a class="code" href="classfecha.html#a26d22b980284408eac0da084f358c43b">toString</a>( ) <span class="keyword">const</span>; <span class="comment">//convierte la fecha a un string</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment">// Operadores relacionales</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#ac971e131a6e3edf57c2313468524f364">operator==</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a27803300b9698e1a40ef48f2009948c5">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#aaded7646e80d88492b31b17b4fb001fd">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a8dfb2f2a7424bdb1dacc6df122b0a0c8">operator&lt;=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a98d0f3009cb7205b5ddb3b81596d9cc7">operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f) <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a1f6d28759c45b138efb80d25a7c398b8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f)<span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classfecha.html#a09eb9f4865c9ff896f438b8df3cf6485">   40</a></span>&#160;  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a09eb9f4865c9ff896f438b8df3cf6485">sec</a>;   <span class="comment">// seconds of minutes from 0 to 61</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="classfecha.html#a3875f28ff6e7c383923c80e86afaec2e">   41</a></span>&#160;  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a3875f28ff6e7c383923c80e86afaec2e">min</a>;   <span class="comment">// minutes of hour from 0 to 59</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classfecha.html#a895a2cc9dd11326a8392a4c6fc928a14">   42</a></span>&#160;  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a895a2cc9dd11326a8392a4c6fc928a14">hour</a>;  <span class="comment">// hours of day from 0 to 24</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classfecha.html#a9c1dc50e5f5efcd3e30a981bfd495b1d">   43</a></span>&#160;  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a9c1dc50e5f5efcd3e30a981bfd495b1d">mday</a>;  <span class="comment">// day of month from 1 to 31</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classfecha.html#a5c86be74f1215600f99798d54126ba16">   44</a></span>&#160;  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a5c86be74f1215600f99798d54126ba16">mon</a>;   <span class="comment">// month of year from 0 to 11</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="classfecha.html#a4d06534f05a6350ae229ce2b17b860e8">   45</a></span>&#160;  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a4d06534f05a6350ae229ce2b17b860e8">year</a>;  <span class="comment">// year since 2000</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">friend</span>  ostream&amp; <a class="code" href="classfecha.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt; </a>( ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f); </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;};</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">/* @brief imprime fecha con el formato  mm/dd/aaaa hh:mm:ss AM/PM</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">*/</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; ostream&amp; <a class="code" href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt; </a>( ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f); </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="fecha_8hxx.html">fecha.hxx</a>&quot;</span> <span class="comment">// Incluimos la implementacion.</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="classfecha_html_a26d22b980284408eac0da084f358c43b"><div class="ttname"><a href="classfecha.html#a26d22b980284408eac0da084f358c43b">fecha::toString</a></div><div class="ttdeci">string toString() const </div></div>
+<div class="ttc" id="classfecha_html_a9787de38b43ae62ba2c0812f3dd18394"><div class="ttname"><a href="classfecha.html#a9787de38b43ae62ba2c0812f3dd18394">fecha::operator&lt;&lt;</a></div><div class="ttdeci">friend ostream &amp; operator&lt;&lt;(ostream &amp;os, const fecha &amp;f)</div><div class="ttdef"><b>Definition:</b> fecha.hxx:14</div></div>
+<div class="ttc" id="classfecha_html_ac971e131a6e3edf57c2313468524f364"><div class="ttname"><a href="classfecha.html#ac971e131a6e3edf57c2313468524f364">fecha::operator==</a></div><div class="ttdeci">bool operator==(const fecha &amp;f) const </div></div>
+<div class="ttc" id="classfecha_html_a5c86be74f1215600f99798d54126ba16"><div class="ttname"><a href="classfecha.html#a5c86be74f1215600f99798d54126ba16">fecha::mon</a></div><div class="ttdeci">int mon</div><div class="ttdef"><b>Definition:</b> fecha.h:44</div></div>
+<div class="ttc" id="classfecha_html_a1f6d28759c45b138efb80d25a7c398b8"><div class="ttname"><a href="classfecha.html#a1f6d28759c45b138efb80d25a7c398b8">fecha::operator!=</a></div><div class="ttdeci">bool operator!=(const fecha &amp;f) const </div></div>
+<div class="ttc" id="fecha_8hxx_html"><div class="ttname"><a href="fecha_8hxx.html">fecha.hxx</a></div></div>
+<div class="ttc" id="classfecha_html_a3875f28ff6e7c383923c80e86afaec2e"><div class="ttname"><a href="classfecha.html#a3875f28ff6e7c383923c80e86afaec2e">fecha::min</a></div><div class="ttdeci">int min</div><div class="ttdef"><b>Definition:</b> fecha.h:41</div></div>
+<div class="ttc" id="classfecha_html_a8dfb2f2a7424bdb1dacc6df122b0a0c8"><div class="ttname"><a href="classfecha.html#a8dfb2f2a7424bdb1dacc6df122b0a0c8">fecha::operator&lt;=</a></div><div class="ttdeci">bool operator&lt;=(const fecha &amp;f) const </div></div>
+<div class="ttc" id="classfecha_html_a98d0f3009cb7205b5ddb3b81596d9cc7"><div class="ttname"><a href="classfecha.html#a98d0f3009cb7205b5ddb3b81596d9cc7">fecha::operator&gt;=</a></div><div class="ttdeci">bool operator&gt;=(const fecha &amp;f) const </div></div>
+<div class="ttc" id="classfecha_html_a27803300b9698e1a40ef48f2009948c5"><div class="ttname"><a href="classfecha.html#a27803300b9698e1a40ef48f2009948c5">fecha::operator&lt;</a></div><div class="ttdeci">bool operator&lt;(const fecha &amp;f) const </div></div>
+<div class="ttc" id="classfecha_html"><div class="ttname"><a href="classfecha.html">fecha</a></div><div class="ttdoc">Clase fecha, asociada a la. </div><div class="ttdef"><b>Definition:</b> fecha.h:21</div></div>
+<div class="ttc" id="classfecha_html_a6775ef84b5838e12e28fd341793f4539"><div class="ttname"><a href="classfecha.html#a6775ef84b5838e12e28fd341793f4539">fecha::fecha</a></div><div class="ttdeci">fecha()</div><div class="ttdoc">fichero de implementacion de la clase fecha </div><div class="ttdef"><b>Definition:</b> fecha.hxx:4</div></div>
+<div class="ttc" id="classfecha_html_a9c1dc50e5f5efcd3e30a981bfd495b1d"><div class="ttname"><a href="classfecha.html#a9c1dc50e5f5efcd3e30a981bfd495b1d">fecha::mday</a></div><div class="ttdeci">int mday</div><div class="ttdef"><b>Definition:</b> fecha.h:43</div></div>
+<div class="ttc" id="classfecha_html_a895a2cc9dd11326a8392a4c6fc928a14"><div class="ttname"><a href="classfecha.html#a895a2cc9dd11326a8392a4c6fc928a14">fecha::hour</a></div><div class="ttdeci">int hour</div><div class="ttdef"><b>Definition:</b> fecha.h:42</div></div>
+<div class="ttc" id="classfecha_html_a4d06534f05a6350ae229ce2b17b860e8"><div class="ttname"><a href="classfecha.html#a4d06534f05a6350ae229ce2b17b860e8">fecha::year</a></div><div class="ttdeci">int year</div><div class="ttdef"><b>Definition:</b> fecha.h:45</div></div>
+<div class="ttc" id="fecha_8h_html_a9787de38b43ae62ba2c0812f3dd18394"><div class="ttname"><a href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt;</a></div><div class="ttdeci">ostream &amp; operator&lt;&lt;(ostream &amp;os, const fecha &amp;f)</div><div class="ttdef"><b>Definition:</b> fecha.hxx:14</div></div>
+<div class="ttc" id="classfecha_html_aaded7646e80d88492b31b17b4fb001fd"><div class="ttname"><a href="classfecha.html#aaded7646e80d88492b31b17b4fb001fd">fecha::operator&gt;</a></div><div class="ttdeci">bool operator&gt;(const fecha &amp;f) const </div></div>
+<div class="ttc" id="classfecha_html_a09eb9f4865c9ff896f438b8df3cf6485"><div class="ttname"><a href="classfecha.html#a09eb9f4865c9ff896f438b8df3cf6485">fecha::sec</a></div><div class="ttdeci">int sec</div><div class="ttdef"><b>Definition:</b> fecha.h:40</div></div>
+<div class="ttc" id="classfecha_html_ac7f5398b71cbccc4cd74f8c5e56b80ce"><div class="ttname"><a href="classfecha.html#ac7f5398b71cbccc4cd74f8c5e56b80ce">fecha::operator=</a></div><div class="ttdeci">fecha &amp; operator=(const fecha &amp;f)</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

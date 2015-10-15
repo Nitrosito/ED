@@ -1,0 +1,143 @@
+\begin{DoxyVersion}{Versión}
+v0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Autor}
+Juan F. Huete
+\end{DoxyAuthor}
+\hypertarget{index_introsec}{}\subsection{Introducción}\label{index_introsec}
+En esta practica se pretende avanzar en el uso de las estructuras de datos, para ello comenzaremos con el diseño de distintos tipos de datos que nos permitan manejar la información asociada a la base de datos de delitos de la ciudad de Chicago (E\-E\-U\-U)\hypertarget{index_baseDatos}{}\subsubsection{Conjunto de Datos}\label{index_baseDatos}
+El conjunto de datos con el que trabajaremos es un subconjunto de la base de datos de la City of Chicago, \char`\"{}\-Crimes-\/2001 to present\char`\"{} los informes sobre delitos (con la excepción de asesinatos) que han ocurrido en la ciudad de Chicago (E\-E\-U\-U) desde 2001 hasta el presente (menos la última semana). Los datos son extraidos del \char`\"{}\-Chicago Police Department's C\-L\-E\-A\-R (\-Citizen Law Enforcement Analysis and Reporting)\char`\"{}. La base de datos original, con unos 6 millones de delitos, se puede obtener entre otros en formato csv (del inglés comma-\/separated values, que representa una tabla, en las que las columnas se separan por comas y las filas por saltos de línea. Así, la primera línea del fichero indica los campos de la base de datos, y el resto de líneas la descripción asociada a cada delito,
+
+
+\begin{DoxyCode}
+ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arr
+est,Domestic,Beat,District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinat
+e,Year,Updated On,Latitude,Longitude,Location
+10230953,HY418703,09/10/2015 11:56:00 PM,048XX W NORTH AVE,0498,BATTERY,AGGRAVAT
+ED DOMESTIC BATTERY: HANDS/FIST/FEET SERIOUS INJURY,APARTMENT,\textcolor{keyword}{true},\textcolor{keyword}{true},2533,025
+,37,25,04B,1143637,1910194,2015,09/17/2015 11:37:18 AM,41.909605035,-87.74777714
+5,\textcolor{stringliteral}{"(41.909605035, -87.747777145)"}
+10230979,HY418750,09/10/2015 11:55:00 PM,120XX S PARNELL AVE,0486,BATTERY,DOMEST
+IC BATTERY SIMPLE,ALLEY,\textcolor{keyword}{true},\textcolor{keyword}{true},0523,005,34,53,08B,1174806,1825089,2015,09/17/
+2015 11:37:18 AM,41.675427135,-87.63581257,\textcolor{stringliteral}{"(41.675427135, -87.63581257)"}
+10231208,HY418843,09/10/2015 11:50:00 PM,021XX W BERWYN AVE,0820,THEFT,$500 AND 
+UNDER,STREET,\textcolor{keyword}{false},\textcolor{keyword}{false},2012,020,40,4,06,1161036,1935171,2015,09/17/2015 11:37:
+18 AM,41.97779966,-87.683164484,\textcolor{stringliteral}{"(41.97779966, -87.683164484)"}
+\end{DoxyCode}
+\hypertarget{index_fecha}{}\subsection{\char`\"{}\-Fecha Límite de Entrega\char`\"{}}\label{index_fecha}
+C++ no tiene un tipo propio para trabajar con fechas, por lo que debemos implementar la clase fecha que deberá tener entre otros los métodos abajo indicados. La especificación de la clase fecha se realizará en el fichero \hyperlink{fecha_8h}{fecha.\-h} y la implementación de la clase fecha la haremos en el fichero \hyperlink{fecha_8hxx}{fecha.\-hxx}.
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{class }\hyperlink{classfecha}{fecha} \{
+\textcolor{keyword}{private}:
+  \textcolor{keywordtype}{int}  \hyperlink{classfecha_a09eb9f4865c9ff896f438b8df3cf6485}{sec};   \textcolor{comment}{// seconds of minutes from 0 to 61}
+  \textcolor{keywordtype}{int}  \hyperlink{classfecha_a3875f28ff6e7c383923c80e86afaec2e}{min};   \textcolor{comment}{// minutes of hour from 0 to 59}
+  \textcolor{keywordtype}{int}  \hyperlink{classfecha_a895a2cc9dd11326a8392a4c6fc928a14}{hour};  \textcolor{comment}{// hours of day from 0 to 24}
+  \textcolor{keywordtype}{int}  \hyperlink{classfecha_a9c1dc50e5f5efcd3e30a981bfd495b1d}{mday};  \textcolor{comment}{// day of month from 1 to 31}
+  \textcolor{keywordtype}{int}  \hyperlink{classfecha_a5c86be74f1215600f99798d54126ba16}{mon};   \textcolor{comment}{// month of year from 0 to 11}
+  \textcolor{keywordtype}{int}  \hyperlink{classfecha_a4d06534f05a6350ae229ce2b17b860e8}{year};  \textcolor{comment}{// year since 2000}
+
+\textcolor{keyword}{public}:
+ \hyperlink{classfecha_a6775ef84b5838e12e28fd341793f4539}{fecha} (); \textcolor{comment}{//Constructor de fecha por defecto}
+ \hyperlink{classfecha_a6775ef84b5838e12e28fd341793f4539}{fecha} (\textcolor{keyword}{const} \textcolor{keywordtype}{string} & s); \textcolor{comment}{// s es un string con el formato mm/dd/aaaa  hh:mm:ss AM/PM}
+
+ \hyperlink{classfecha}{fecha} & \hyperlink{classfecha_ac7f5398b71cbccc4cd74f8c5e56b80ce}{operator=}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f);
+ \hyperlink{classfecha}{fecha} & \hyperlink{classfecha_ac7f5398b71cbccc4cd74f8c5e56b80ce}{operator=}(\textcolor{keyword}{const} \textcolor{keywordtype}{string} & s); \textcolor{comment}{// s es un string con el formato mm/dd/aaaa hh:mm:ss
+       AM/PM}
+ \textcolor{keywordtype}{string} \hyperlink{classfecha_a26d22b980284408eac0da084f358c43b}{toString}() \textcolor{keyword}{const};
+
+\textcolor{comment}{// Operadores relacionales}
+  \textcolor{keywordtype}{bool} \hyperlink{classfecha_ac971e131a6e3edf57c2313468524f364}{operator==}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f) \textcolor{keyword}{const};
+ \textcolor{keywordtype}{bool} \hyperlink{classfecha_a27803300b9698e1a40ef48f2009948c5}{operator<}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f)\textcolor{keyword}{const};
+ \textcolor{keywordtype}{bool} \hyperlink{classfecha_aaded7646e80d88492b31b17b4fb001fd}{operator>}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f) \textcolor{keyword}{const};
+ \textcolor{keywordtype}{bool} \hyperlink{classfecha_a8dfb2f2a7424bdb1dacc6df122b0a0c8}{operator<=}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f)\textcolor{keyword}{const};
+ \textcolor{keywordtype}{bool} \hyperlink{classfecha_a98d0f3009cb7205b5ddb3b81596d9cc7}{operator>=}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f) \textcolor{keyword}{const};
+ \textcolor{keywordtype}{bool} \hyperlink{classfecha_a1f6d28759c45b138efb80d25a7c398b8}{operator!=}(\textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f)\textcolor{keyword}{const};
+\}
+
+ ostream& \hyperlink{fecha_8h_a9787de38b43ae62ba2c0812f3dd18394}{operator<< }( ostream& os, \textcolor{keyword}{const} \hyperlink{classfecha}{fecha} & f); imprime 
+      \hyperlink{classfecha}{fecha} con el formato  mm/dd/aaaa hh:mm:ss AM/PM
+
+\textcolor{preprocessor}{#include "\hyperlink{fecha_8hxx}{fecha.hxx}"} \textcolor{comment}{// Incluimos la implementacion.}
+\end{DoxyCode}
+
+
+Así, podremos trabajar con fechas como indica el siguiente código 
+\begin{DoxyCode}
+...
+fecha f1;
+f1 = \textcolor{stringliteral}{"09/10/2015 11:55:00 PM"};
+\hyperlink{classfecha}{fecha} f2(f1);
+...
+fecha f3 = \textcolor{stringliteral}{"09/04/2010 11:55:00 PM"}
+..
+\textcolor{keywordflow}{if} (f1<f3) 
+  cout << f1 << \textcolor{stringliteral}{" es menor que "} f3;
+...
+\end{DoxyCode}
+\hypertarget{index_crime}{}\subsection{Crimen}\label{index_crime}
+A igual que con la clase fecha, la especificación del tipo crimen y su implementación se realizará en los ficheros \hyperlink{crimen_8h}{crimen.\-h} y crimen.\-hxx, respectivamente, y debe tener la información de los atributos (con su representacion asociada)
+
+\begin{DoxyItemize}
+\item I\-D\-: identificador del delito (long int) \item Case Number\-: Código del caso (string) \item Date\-: Fecha en formato mm/dd/aaaa hh\-:mm\-:ss A\-M/\-P\-M (fecha, ver arriba) \item I\-U\-C\-R\-: Código del tipo de delito según Illinois Uniform Crime Reporting, I\-U\-C\-R (string) \item Primary Type\-: Tipo de delito (string) \item Description\-: Descripción más detallada (string) \item Location Description\-: Descripción del tipo de localización (string) \item Arrest\-: Si hay arrestos o no (boolean) \item Domestic\-: Si es un crimen domenstico o no (boolean) \item Latitude\-: Coordenada de latitud (double) \item Longitude\-: Coordenad de longitud (double)\end{DoxyItemize}
+
+\begin{DoxyCode}
+\textcolor{comment}{// Fichero crimen.h  }
+\textcolor{keyword}{class }\hyperlink{classcrimen}{crimen} \{
+ ....
+\}
+
+\textcolor{preprocessor}{#include "crimen.hxx"} \textcolor{comment}{// Incluimos la implementacion}
+\end{DoxyCode}
+\hypertarget{index_dicc}{}\subsection{Conjunto como T\-D\-A contenedor de información}\label{index_dicc}
+Nuestro conjunto será un contenedor que permite almacenar la información de la base de datos de delitos. Para un mejor acceso, los elementos deben estar ordenados según I\-D, en orden creciente. Como T\-D\-A, lo vamos a dotar de un conjunto restringido de métodos (inserción de elementos, consulta de un elemento por I\-D, etc.). Este diccionario \char`\"{}simulará\char`\"{} un set de la stl, con algunas claras diferencias pues, entre otros, no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos, que se hará en las siguientes prácticas.
+
+Asociado al conjunto, tendremos los tipos 
+\begin{DoxyCode}
+\hyperlink{classcrimen}{conjunto::entrada}
+
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto::size\_type}
+\end{DoxyCode}
+ que permiten hacer referencia a los elementos almacenados en cada una de las posiciones y el número de elementos del mismo, respectivamente.\hypertarget{index_sec_tar}{}\subsection{\char`\"{}\-Se Entrega / Se Pide\char`\"{}}\label{index_sec_tar}
+\hypertarget{index_ssEntrega}{}\subsubsection{Se entrega}\label{index_ssEntrega}
+En esta práctica se entrega los fuentes necesarios para generar la documentación de este proyecto así como el código necesario para resolver este problema. En concreto los ficheros que se entregan son\-:
+
+\begin{DoxyItemize}
+\item documentacion.\-pdf Documentación de la práctica en pdf. \item dox\-\_\-diccionario Este fichero contiene el fichero de configuración de doxigen necesario para generar la documentación del proyecto (html y pdf). Para ello, basta con ejecutar desde la línea de comando 
+\begin{DoxyCode}
+doxygen doxPractica
+\end{DoxyCode}
+ La documentación en html la podemos encontrar en el fichero ./html/index.html, para generar la documentación en latex es suficiente con hacer los siguientes pasos 
+\begin{DoxyCode}
+cd latex
+make
+\end{DoxyCode}
+ como resultado tendremos el fichero refman.\-pdf que incluye toda la documentación generada.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \hyperlink{conjunto_8h}{conjunto.\-h} Especificación del T\-D\-A conjunto. \item conjunto.\-hxx plantilla de fichero donde debemos implementar el conjunto. \item \hyperlink{crimen_8h}{crimen.\-h} Plantilla para la especificación del T\-D\-A crimen \item crimen.\-hxx plantilla de fichero donde debemos implementar el crimen \item \hyperlink{fecha_8h}{fecha.\-h} Plantilla para la especificación del T\-D\-A fecha \item \hyperlink{fecha_8hxx}{fecha.\-hxx} plantilla de fichero donde debemos implementarlo\end{DoxyItemize}
+\begin{DoxyItemize}
+\item \hyperlink{principal_8cpp}{principal.\-cpp} fichero donde se incluye el main del programa. En este caso, se toma como entrada el fichero de datos \char`\"{}crimenes.\-csv\char`\"{} y se debe cargar en el set.\end{DoxyItemize}
+\hypertarget{index_ssPide}{}\subsubsection{Se Pide}\label{index_ssPide}
+\begin{DoxyItemize}
+\item Diseñar la función de abstracción e invariante de la representación del tipo fecha \item Diseñar la función de abstracción e invariante de la representación del tipo crimen. \item Se pide implementar el código asociado a los ficheros .hxx. \item Analizar la eficiencia teórica y empírica de las operaciones de insercion y búsqueda en el conjunto.\end{DoxyItemize}
+\hypertarget{index_rep}{}\subsection{Representación}\label{index_rep}
+El alumno deberá realizar una implementación utilizando como base el T\-D\-A vector de la S\-T\-L. En particular, la representación que se utiliza es un vector ordenado de entradas, teniendo en cuenta el valor de la clave I\-D.\hypertarget{index_fact_sec2}{}\subsubsection{Función de Abstracción \-:}\label{index_fact_sec2}
+Función de Abstracción\-: A\-F\-: Rep =$>$ Abs \begin{DoxyVerb}dado C =(vector<crimen> vc ) ==> Conjunto BD;
+\end{DoxyVerb}
+
+
+Un objeto abstracto, B\-D, representando una colección O\-R\-D\-E\-N\-A\-D\-A de crimenes según I\-D, se instancia en la clase conjunto como un vector ordenado de crimenes,\hypertarget{index_inv_sec2}{}\subsubsection{Invariante de la Representación\-:}\label{index_inv_sec2}
+Propiedades que debe cumplir cualquier objeto
+
+
+\begin{DoxyCode}
+BD.size() == C.vc.size();
+
+Para todo i, 0 <= i < V.vc.size() se cumple
+    C.vc[i].ID > 0;
+Para todo i, 0 <= i < D.dic.size()-1 se cumple
+    C.vc[i].ID<= D.dic[i+1].ID
+\end{DoxyCode}
+\hypertarget{index_fecha}{}\subsection{\char`\"{}\-Fecha Límite de Entrega\char`\"{}}\label{index_fecha}
+La fecha límite de entrega será el 6 de Noviembre. 

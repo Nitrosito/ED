@@ -1,0 +1,204 @@
+/*! \mainpage  Documentación Práctica
+ *
+\version v0
+\author  Juan F. Huete
+
+\tableofcontents
+
+
+
+\section introsec Introducción
+
+ En esta practica se pretende avanzar en el uso de las estructuras de datos, para ello comenzaremos con el diseño de distintos tipos de datos que nos permitan manejar la información asociada a la base de datos de delitos de la ciudad de Chicago (EEUU)
+
+\subsection baseDatos Conjunto de Datos 
+
+El conjunto de datos con el que trabajaremos es un subconjunto de la base de datos de la City of Chicago, "Crimes-2001 to present" los informes sobre delitos (con la excepción de asesinatos) que han ocurrido en la ciudad de Chicago (EEUU) desde 2001 hasta el presente (menos la última semana). Los datos son extraidos del "Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting)". La base de datos original, con unos 6 millones de delitos, se puede obtener entre otros en formato csv (del inglés comma-separated values, que representa una tabla, en las que las columnas se separan por comas y las filas por saltos de línea. Así, la primera línea del fichero indica los campos de la base de datos, y el resto de líneas la descripción asociada a cada delito, 
+
+\code
+  
+ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arr
+est,Domestic,Beat,District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinat
+e,Year,Updated On,Latitude,Longitude,Location
+10230953,HY418703,09/10/2015 11:56:00 PM,048XX W NORTH AVE,0498,BATTERY,AGGRAVAT
+ED DOMESTIC BATTERY: HANDS/FIST/FEET SERIOUS INJURY,APARTMENT,true,true,2533,025
+,37,25,04B,1143637,1910194,2015,09/17/2015 11:37:18 AM,41.909605035,-87.74777714
+5,"(41.909605035, -87.747777145)"
+10230979,HY418750,09/10/2015 11:55:00 PM,120XX S PARNELL AVE,0486,BATTERY,DOMEST
+IC BATTERY SIMPLE,ALLEY,true,true,0523,005,34,53,08B,1174806,1825089,2015,09/17/
+2015 11:37:18 AM,41.675427135,-87.63581257,"(41.675427135, -87.63581257)"
+10231208,HY418843,09/10/2015 11:50:00 PM,021XX W BERWYN AVE,0820,THEFT,$500 AND 
+UNDER,STREET,false,false,2012,020,40,4,06,1161036,1935171,2015,09/17/2015 11:37:
+18 AM,41.97779966,-87.683164484,"(41.97779966, -87.683164484)"
+\endcode
+
+
+\section fecha TDA fecha
+
+C++ no tiene un tipo propio para trabajar con fechas, por lo que debemos implementar la clase fecha que deberá tener entre otros los métodos abajo indicados. La especificación de la clase fecha se realizará en el fichero fecha.h y la implementación de la clase fecha la haremos en el fichero fecha.hxx.
+
+\code
+class fecha {
+private:
+  int  sec;   // seconds of minutes from 0 to 61
+  int  min;   // minutes of hour from 0 to 59
+  int  hour;  // hours of day from 0 to 24
+  int  mday;  // day of month from 1 to 31
+  int  mon;   // month of year from 0 to 11
+  int  year;  // year since 2000
+
+public:
+ fecha (); //Constructor de fecha por defecto
+ fecha (const string & s); // s es un string con el formato mm/dd/aaaa  hh:mm:ss AM/PM
+
+ fecha & operator=(const fecha & f);
+ fecha & operator=(const string & s); // s es un string con el formato mm/dd/aaaa hh:mm:ss AM/PM
+ string toString() const;
+
+// Operadores relacionales
+  bool operator==(const fecha & f) const;
+ bool operator<(const fecha & f)const;
+ bool operator>(const fecha & f) const;
+ bool operator<=(const fecha & f)const;
+ bool operator>=(const fecha & f) const;
+ bool operator!=(const fecha & f)const;
+}
+
+ ostream& operator<< ( ostream& os, const fecha & f); imprime fecha con el formato  mm/dd/aaaa hh:mm:ss AM/PM
+
+#include "fecha.hxx" // Incluimos la implementacion.
+\endcode
+
+
+Así, podremos trabajar con fechas como indica el siguiente código 
+\code 
+...
+fecha f1;
+f1 = "09/10/2015 11:55:00 PM";
+fecha f2(f1);
+...
+fecha f3 = "09/04/2010 11:55:00 PM"
+..
+if (f1<f3) 
+  cout << f1 << " es menor que " f3;
+...
+\endcode
+
+
+
+\section crime Crimen
+
+A igual que con la clase fecha, la especificación del tipo crimen y  su implementación se realizará en los ficheros crimen.h y crimen.hxx, respectivamente, y debe tener la información de los atributos (con su representacion asociada)
+
+\li ID: identificador del delito (long int)
+\li Case Number: Código del caso (string)
+\li Date: Fecha en formato mm/dd/aaaa  hh:mm:ss AM/PM (fecha, ver arriba)
+\li IUCR: Código del tipo de delito según  Illinois Uniform Crime Reporting, IUCR (string)
+\li Primary Type: Tipo de delito (string)
+\li Description: Descripción más detallada (string)
+\li Location Description: Descripción del tipo de localización (string)
+\li Arrest: Si hay arrestos o no (boolean)
+\li Domestic: Si es un crimen domenstico o no (boolean)
+\li Latitude: Coordenada de latitud (double)
+\li Longitude: Coordenad de longitud (double)
+
+\code
+// Fichero crimen.h  
+class crimen {
+ ....
+}
+
+#include "crimen.hxx" // Incluimos la implementacion
+\endcode
+
+
+\section dicc Conjunto como TDA contenedor de información 
+
+Nuestro conjunto será un contenedor que permite almacenar la información de la base de datos de delitos. Para un mejor acceso, los elementos deben estar ordenados según ID,  en orden creciente.  
+Como TDA, lo vamos a dotar de un conjunto restringido de métodos (inserción de elementos, consulta de un elemento por ID, etc.). Este diccionario "simulará" un set de la stl, con algunas claras diferencias pues, entre otros,  no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos, que se hará en las siguientes prácticas.
+
+Asociado al conjunto, tendremos los tipos
+\code 
+conjunto::entrada
+
+conjunto::size_type
+\endcode 
+que permiten hacer referencia a los elementos almacenados en cada una de las posiciones  y el número de elementos del mismo, respectivamente.
+
+
+
+
+\section sec_tar "Se Entrega / Se Pide"
+
+\subsection ssEntrega Se entrega
+
+
+En esta práctica se entrega los fuentes necesarios para generar la documentación de este proyecto así como el código necesario para resolver este problema. En concreto los ficheros que se entregan son:
+
+\li documentacion.pdf Documentación de la práctica en pdf.
+\li dox_diccionario Este fichero contiene el fichero de configuración de doxigen necesario para generar la documentación del proyecto (html y pdf). Para ello, basta con ejecutar desde la línea de comando
+\code
+ doxygen doxPractica
+\endcode
+La documentación en html la podemos encontrar en el fichero ./html/index.html, para generar la documentación en latex es suficiente con hacer los siguientes pasos
+\code
+ cd latex
+ make
+\endcode
+como resultado tendremos el fichero refman.pdf que incluye toda la documentación generada.
+
+\li conjunto.h Especificación del TDA conjunto.
+\li conjunto.hxx plantilla de fichero donde debemos implementar el conjunto.
+\li crimen.h Plantilla para la especificación del TDA crimen
+\li crimen.hxx  plantilla de fichero donde debemos implementar el crimen
+\li fecha.h Plantilla para la especificación del TDA fecha
+\li fecha.hxx  plantilla de fichero donde debemos implementarlo
+
+
+\li principal.cpp fichero donde se incluye el main del programa. En este caso, se toma como entrada el fichero de datos "crimenes.csv" y se debe cargar en el set. 
+
+\subsection ssPide Se Pide
+
+  \li Diseñar la función de abstracción e invariante de la representación del tipo fecha
+  \li Diseñar la función de abstracción e invariante de la representación del tipo crimen. 
+  \li Se pide implementar el código asociado a los ficheros .hxx. 
+  \li Analizar la eficiencia teórica y empírica de las operaciones de insercion y búsqueda en el conjunto. 
+
+
+
+
+\section rep Representación
+
+El alumno deberá realizar una implementación utilizando como base el TDA vector de la STL. En particular, la representación que se utiliza es un vector ordenado de entradas, teniendo en cuenta el valor de la clave ID. 
+ 
+\subsection fact_sec2 Función de Abstracción :
+
+Función de Abstracción:
+AF: Rep => Abs
+   
+    dado C =(vector<crimen> vc ) ==> Conjunto BD;
+
+Un objeto abstracto, BD, representando una colección ORDENADA de crimenes según ID, se instancia en la clase conjunto como un vector ordenado de crimenes, 
+
+
+ 
+\subsection inv_sec2 Invariante de la Representación:
+
+
+Propiedades que debe cumplir cualquier objeto 
+
+\code
+BD.size() == C.vc.size();
+
+Para todo i, 0 <= i < V.vc.size() se cumple
+	C.vc[i].ID > 0;
+Para todo i, 0 <= i < D.dic.size()-1 se cumple
+	C.vc[i].ID<= D.dic[i+1].ID
+
+\endcode
+
+\section fecha "Fecha Límite de Entrega"
+
+La fecha límite de entrega será el 6 de Noviembre.
+
+*/

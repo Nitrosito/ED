@@ -1,0 +1,402 @@
+\hypertarget{classconjunto}{\subsection{Referencia de la Clase conjunto}
+\label{classconjunto}\index{conjunto@{conjunto}}
+}
+
+
+Clase conjunto.  
+
+
+
+
+{\ttfamily \#include $<$conjunto.\-h$>$}
+
+\subsubsection*{Tipos públicos}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{classcrimen}{crimen} \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{entrada}
+\begin{DoxyCompactList}\small\item\em entrada permite hacer referencia al elemento almacenados en cada una de las posiciones del conjunto \end{DoxyCompactList}\item 
+typedef unsigned int \hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{size\-\_\-type}
+\begin{DoxyCompactList}\small\item\em size\-\_\-type numero de elementos en el conjunto \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classconjunto_a16d987f42c679efab01748178ba45891}{conjunto} ()
+\begin{DoxyCompactList}\small\item\em constructor primitivo. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_ab0944b1f9a0c959ca314ce0debd5def9}{conjunto} (const \hyperlink{classconjunto}{conjunto} \&d)
+\begin{DoxyCompactList}\small\item\em constructor de copia \end{DoxyCompactList}\item 
+pair$<$ \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{conjunto\-::entrada}, bool $>$ \hyperlink{classconjunto_a64ee1c67331bce15dc029048631dda97}{find} (const long int \&id) const 
+\begin{DoxyCompactList}\small\item\em busca un crimen en el conjunto \end{DoxyCompactList}\item 
+\hyperlink{classconjunto}{conjunto}$<$ \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{conjunto\-::entrada} $>$ \hyperlink{classconjunto_a50eb93f152dc973726d184733d7ecd98}{find\-I\-U\-C\-R} (const string \&iucr) const 
+\begin{DoxyCompactList}\small\item\em busca los crimenes con el mismo codigo I\-U\-C\-R \end{DoxyCompactList}\item 
+\hyperlink{classconjunto}{conjunto}$<$ \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{conjunto\-::entrada} $>$ \hyperlink{classconjunto_a5190c59db573008cc48a8ce734954a96}{find\-D\-E\-S\-C\-R} (const string \&descr) const 
+\begin{DoxyCompactList}\small\item\em busca los crimenes que contienen una determinada descripcion \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_aa65b9f7c4cb9bad6d4e40c1973095930}{insert} (const \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{conjunto\-::entrada} \&e)
+\begin{DoxyCompactList}\small\item\em Inserta una entrada en el conjunto. \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_ad550177fa4454da3a10fa356417e39a7}{erase} (const long int \&id)
+\begin{DoxyCompactList}\small\item\em Borra el delito dado un identificacador. \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_a77a21ed91f1002f4eaed48d86535a874}{erase} (const \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{conjunto\-::entrada} \&e)
+\begin{DoxyCompactList}\small\item\em Borra una crimen con identificador dado por e.\-get\-I\-D() en el conjunto. \end{DoxyCompactList}\item 
+\hyperlink{classconjunto}{conjunto} \& \hyperlink{classconjunto_a2bdce402a4b76117b68fe71c0dffab87}{operator=} (const \hyperlink{classconjunto}{conjunto} \&org)
+\begin{DoxyCompactList}\small\item\em operador de asignación \end{DoxyCompactList}\item 
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{size\-\_\-type} \hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size} () const 
+\begin{DoxyCompactList}\small\item\em numero de entradas en el conjunto \end{DoxyCompactList}\item 
+bool \hyperlink{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}{empty} () const 
+\begin{DoxyCompactList}\small\item\em Chequea si el conjunto esta vacio. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Métodos privados}
+\begin{DoxyCompactItemize}
+\item 
+bool \hyperlink{classconjunto_adb0ff15cf65817b0b279bae4bf06decb}{cheq\-\_\-rep} () const 
+\begin{DoxyCompactList}\small\item\em Chequea el Invariante de la representacion. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+vector$<$ \hyperlink{classcrimen}{crimen} $>$ \hyperlink{classconjunto_aed485e92bb3d8b2c82fc85657947761d}{vc}
+\end{DoxyCompactItemize}
+\subsubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classconjunto_ae54b721035471d372f29c0335c42734a}{operator$<$$<$} (ostream \&sal, const \hyperlink{classconjunto}{conjunto} \&D)
+\begin{DoxyCompactList}\small\item\em imprime todas las entradas del conjunto \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Clase conjunto. 
+
+Métodos--$>$ conjunto\-:\-: \hyperlink{classconjunto_a16d987f42c679efab01748178ba45891}{conjunto()}, \hyperlink{classconjunto_aa65b9f7c4cb9bad6d4e40c1973095930}{insert()}, \hyperlink{classconjunto_a64ee1c67331bce15dc029048631dda97}{find()}, \hyperlink{classconjunto_a50eb93f152dc973726d184733d7ecd98}{find\-I\-U\-C\-R()}, \hyperlink{classconjunto_a5190c59db573008cc48a8ce734954a96}{find\-D\-E\-S\-C\-R()}, \hyperlink{classconjunto_ad550177fa4454da3a10fa356417e39a7}{erase()}, \hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size()}, \hyperlink{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}{empty()}
+
+Tipos--$>$ \hyperlink{classconjunto_a09cad766dd65de73e51eae21f9d22585}{conjunto\-::entrada}, \hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto\-::size\-\_\-type}
+
+Descripción
+
+Un conjunto es un contenedor que permite almacenar en orden creciente un conjunto de elementos no repetidos. En nuestro caso el conjunto va a tener un subconjunto restringido de métodos (inserción de elementos, consulta de un elemento, etc). Este conjunto \char`\"{}simulará\char`\"{} un conjunto de la stl, con algunas claras diferencias pues, entre otros, no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos.
+
+Asociado al conjunto, tendremos el tipo
+\begin{DoxyCode}
+\hyperlink{classcrimen}{conjunto::entrada} 
+\end{DoxyCode}
+ que permite hacer referencia al elemento almacenados en cada una de las posiciones del conjunto, en nuestro caso delitos (crimenes). Para esta entrada el requisito es que tenga definidos el operador$<$ y operator=
+
+Además encontraremos el tipo
+\begin{DoxyCode}
+\hyperlink{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{conjunto::size\_type} 
+\end{DoxyCode}
+ que permite hacer referencia al número de elementos en el conjunto.
+
+El número de elementos en el conjunto puede variar dinámicamente; la gestión de la memoria es automática.
+
+Ejemplo de su uso\-: 
+\begin{DoxyCode}
+...
+conjunto DatosChicago, agresion;
+\hyperlink{classcrimen}{crimen} cr;
+
+\hyperlink{classconjunto}{conjunto}.\hyperlink{classconjunto_aa65b9f7c4cb9bad6d4e40c1973095930}{insert}(cr);
+...
+agresion = \hyperlink{classconjunto}{conjunto}.\hyperlink{classconjunto_a5190c59db573008cc48a8ce734954a96}{findDESCR}(\textcolor{stringliteral}{"BATTERY"});
+
+\textcolor{keywordflow}{if} (!agresion.empty())\{
+ cout <<\textcolor{stringliteral}{"Tenemos "}<< agresion.size() << \textcolor{stringliteral}{" agresiones"} << endl;
+ cout << agresion << endl;
+\} \textcolor{keywordflow}{else} \textcolor{stringliteral}{"No hay agresiones en el conjunto"} << endl;
+...
+\end{DoxyCode}
+ \begin{DoxyRefDesc}{Tareas pendientes}
+\item[\hyperlink{todo__todo000003}{Tareas pendientes}]Implementa esta clase, junto con su documentación asociada \end{DoxyRefDesc}
+
+
+\subsubsection{Documentación de los 'Typedef' miembros de la clase}
+\hypertarget{classconjunto_a09cad766dd65de73e51eae21f9d22585}{\index{conjunto@{conjunto}!entrada@{entrada}}
+\index{entrada@{entrada}!conjunto@{conjunto}}
+\paragraph[{entrada}]{\setlength{\rightskip}{0pt plus 5cm}typedef {\bf crimen} {\bf conjunto\-::entrada}}}\label{classconjunto_a09cad766dd65de73e51eae21f9d22585}
+
+
+entrada permite hacer referencia al elemento almacenados en cada una de las posiciones del conjunto 
+
+\hypertarget{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}{\index{conjunto@{conjunto}!size\-\_\-type@{size\-\_\-type}}
+\index{size\-\_\-type@{size\-\_\-type}!conjunto@{conjunto}}
+\paragraph[{size\-\_\-type}]{\setlength{\rightskip}{0pt plus 5cm}typedef unsigned int {\bf conjunto\-::size\-\_\-type}}}\label{classconjunto_a855a5893bb0f5a851ab2dbf2b8aa6cc7}
+
+
+size\-\_\-type numero de elementos en el conjunto 
+
+
+
+\subsubsection{Documentación del constructor y destructor}
+\hypertarget{classconjunto_a16d987f42c679efab01748178ba45891}{\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\paragraph[{conjunto}]{\setlength{\rightskip}{0pt plus 5cm}conjunto\-::conjunto (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classconjunto_a16d987f42c679efab01748178ba45891}
+
+
+constructor primitivo. 
+
+\hypertarget{classconjunto_ab0944b1f9a0c959ca314ce0debd5def9}{\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\index{conjunto@{conjunto}!conjunto@{conjunto}}
+\paragraph[{conjunto}]{\setlength{\rightskip}{0pt plus 5cm}conjunto\-::conjunto (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto} \&}]{d}
+\end{DoxyParamCaption}
+)}}\label{classconjunto_ab0944b1f9a0c959ca314ce0debd5def9}
+
+
+constructor de copia 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em d} & conjunto a copiar \\
+\hline
+\end{DoxyParams}
+
+
+\subsubsection{Documentación de las funciones miembro}
+\hypertarget{classconjunto_adb0ff15cf65817b0b279bae4bf06decb}{\index{conjunto@{conjunto}!cheq\-\_\-rep@{cheq\-\_\-rep}}
+\index{cheq\-\_\-rep@{cheq\-\_\-rep}!conjunto@{conjunto}}
+\paragraph[{cheq\-\_\-rep}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\-::cheq\-\_\-rep (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [private]}}}\label{classconjunto_adb0ff15cf65817b0b279bae4bf06decb}
+
+
+Chequea el Invariante de la representacion. 
+
+\begin{DoxyInvariant}{Invariante}
+
+\end{DoxyInvariant}
+I\-R\-: rep ==$>$ bool
+
+\begin{DoxyItemize}
+\item Para todo i, 0 $<$= i $<$ vc.\-size() se cumple vc\mbox{[}i\mbox{]}.I\-D $>$ 0; \item Para todo i, 0 $<$= i $<$= D.\-dic.\-size()-\/1 se cumple vc\mbox{[}i\mbox{]}.I\-D$<$ vc\mbox{[}i+1\mbox{]}.I\-D\begin{DoxyReturn}{Devuelve}
+true si el invariante es correcto, falso en caso contrario 
+\end{DoxyReturn}
+\end{DoxyItemize}
+\hypertarget{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}{\index{conjunto@{conjunto}!empty@{empty}}
+\index{empty@{empty}!conjunto@{conjunto}}
+\paragraph[{empty}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\-::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classconjunto_afcf4ff3ff3c1f83b63e901efebe93533}
+
+
+Chequea si el conjunto esta vacio. 
+
+\begin{DoxyReturn}{Devuelve}
+true si \hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size()}==0, false en caso contrario. 
+\end{DoxyReturn}
+\hypertarget{classconjunto_ad550177fa4454da3a10fa356417e39a7}{\index{conjunto@{conjunto}!erase@{erase}}
+\index{erase@{erase}!conjunto@{conjunto}}
+\paragraph[{erase}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\-::erase (
+\begin{DoxyParamCaption}
+\item[{const long int \&}]{id}
+\end{DoxyParamCaption}
+)}}\label{classconjunto_ad550177fa4454da3a10fa356417e39a7}
+
+
+Borra el delito dado un identificacador. 
+
+Busca la entrada con id en el conjunto y si la encuentra la borra
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em id} & a borrar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la entrada se ha podido borrar con éxito. False en caso contrario 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+Si esta en el conjunto su tamaño se decrementa en 1. 
+\end{DoxyPostcond}
+\hypertarget{classconjunto_a77a21ed91f1002f4eaed48d86535a874}{\index{conjunto@{conjunto}!erase@{erase}}
+\index{erase@{erase}!conjunto@{conjunto}}
+\paragraph[{erase}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\-::erase (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\-::entrada} \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classconjunto_a77a21ed91f1002f4eaed48d86535a874}
+
+
+Borra una crimen con identificador dado por e.\-get\-I\-D() en el conjunto. 
+
+Busca la entrada con id en el conjunto (o e.\-get\-I\-D() en el segundo caso) y si la encuentra la borra
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em entrada} & con e.\-get\-I\-D() que geremos borrar, el resto de los valores no son tenidos en cuenta \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la entrada se ha podido borrar con éxito. False en caso contrario 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+Si esta en el conjunto su tamaño se decrementa en 1. 
+\end{DoxyPostcond}
+\hypertarget{classconjunto_a64ee1c67331bce15dc029048631dda97}{\index{conjunto@{conjunto}!find@{find}}
+\index{find@{find}!conjunto@{conjunto}}
+\paragraph[{find}]{\setlength{\rightskip}{0pt plus 5cm}pair$<${\bf conjunto\-::entrada},bool$>$ conjunto\-::find (
+\begin{DoxyParamCaption}
+\item[{const long int \&}]{id}
+\end{DoxyParamCaption}
+) const}}\label{classconjunto_a64ee1c67331bce15dc029048631dda97}
+
+
+busca un crimen en el conjunto 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em id} & identificador del crimen buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Si existe una entrada en el conjunto devuelve un par con una copia de la entrada en el conjunto y con el segundo valor a true. Si no se encuentra devuelve la entrada con la definicion por defecto y false 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. \begin{DoxyVerb}Uso
+   
+
+if (C.find(12345).second ==true) cout << "Esta" ;
+else cout << "No esta";
+\end{DoxyVerb}
+ 
+\end{DoxyPostcond}
+\hypertarget{classconjunto_a5190c59db573008cc48a8ce734954a96}{\index{conjunto@{conjunto}!find\-D\-E\-S\-C\-R@{find\-D\-E\-S\-C\-R}}
+\index{find\-D\-E\-S\-C\-R@{find\-D\-E\-S\-C\-R}!conjunto@{conjunto}}
+\paragraph[{find\-D\-E\-S\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto}$<${\bf conjunto\-::entrada}$>$ conjunto\-::find\-D\-E\-S\-C\-R (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{descr}
+\end{DoxyParamCaption}
+) const}}\label{classconjunto_a5190c59db573008cc48a8ce734954a96}
+
+
+busca los crimenes que contienen una determinada descripcion 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em descr} & string que representa la descripcion del delito buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un conjunto con todos los crimenes que contengan descr en su descripcion\-R. Si no existe ninguno devuelve el conjunto vacio. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. \begin{DoxyVerb}Uso
+    vector<crimen> C, A;
+    ....
+    A = C.findDESCR("BATTERY");
+\end{DoxyVerb}
+ 
+\end{DoxyPostcond}
+\hypertarget{classconjunto_a50eb93f152dc973726d184733d7ecd98}{\index{conjunto@{conjunto}!find\-I\-U\-C\-R@{find\-I\-U\-C\-R}}
+\index{find\-I\-U\-C\-R@{find\-I\-U\-C\-R}!conjunto@{conjunto}}
+\paragraph[{find\-I\-U\-C\-R}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto}$<${\bf conjunto\-::entrada}$>$ conjunto\-::find\-I\-U\-C\-R (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{iucr}
+\end{DoxyParamCaption}
+) const}}\label{classconjunto_a50eb93f152dc973726d184733d7ecd98}
+
+
+busca los crimenes con el mismo codigo I\-U\-C\-R 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em icur} & identificador del crimen buscar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+Devuelve un conjunto con todos los crimenes con el codigo I\-U\-C\-R. Si no existe ninguno devuelve el conjunto vacio. 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+no modifica el conjunto. \begin{DoxyVerb}Uso
+    vector<crimen> C, A;
+    ....
+    A = C.findIUCR("0460");
+\end{DoxyVerb}
+ 
+\end{DoxyPostcond}
+\hypertarget{classconjunto_aa65b9f7c4cb9bad6d4e40c1973095930}{\index{conjunto@{conjunto}!insert@{insert}}
+\index{insert@{insert}!conjunto@{conjunto}}
+\paragraph[{insert}]{\setlength{\rightskip}{0pt plus 5cm}bool conjunto\-::insert (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto\-::entrada} \&}]{e}
+\end{DoxyParamCaption}
+)}}\label{classconjunto_aa65b9f7c4cb9bad6d4e40c1973095930}
+
+
+Inserta una entrada en el conjunto. 
+
+
+\begin{DoxyParams}{Parámetros}
+{\em e} & entrada a insertar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Devuelve}
+true si la entrada se ha podido insertar con éxito. False en caso contrario 
+\end{DoxyReturn}
+\begin{DoxyPostcond}{Postcondición}
+Si e no esta en el conjunto, el \hyperlink{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{size()} sera incrementado en 1. 
+\end{DoxyPostcond}
+\hypertarget{classconjunto_a2bdce402a4b76117b68fe71c0dffab87}{\index{conjunto@{conjunto}!operator=@{operator=}}
+\index{operator=@{operator=}!conjunto@{conjunto}}
+\paragraph[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf conjunto}\& conjunto\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf conjunto} \&}]{org}
+\end{DoxyParamCaption}
+)}}\label{classconjunto_a2bdce402a4b76117b68fe71c0dffab87}
+
+
+operador de asignación 
+
+
+\begin{DoxyParams}[1]{Parámetros}
+\mbox{\tt in}  & {\em org} & conjunto a copiar. Crea un conjunto duplicado exacto de org. \\
+\hline
+\end{DoxyParams}
+\hypertarget{classconjunto_a863e1e106e35adda47e7c5e2067295b9}{\index{conjunto@{conjunto}!size@{size}}
+\index{size@{size}!conjunto@{conjunto}}
+\paragraph[{size}]{\setlength{\rightskip}{0pt plus 5cm}{\bf size\-\_\-type} conjunto\-::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classconjunto_a863e1e106e35adda47e7c5e2067295b9}
+
+
+numero de entradas en el conjunto 
+
+\begin{DoxyPostcond}{Postcondición}
+No se modifica el conjunto. 
+\end{DoxyPostcond}
+
+
+\subsubsection{Documentación de las funciones relacionadas y clases amigas}
+\hypertarget{classconjunto_ae54b721035471d372f29c0335c42734a}{\index{conjunto@{conjunto}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!conjunto@{conjunto}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{sal, }
+\item[{const {\bf conjunto} \&}]{D}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classconjunto_ae54b721035471d372f29c0335c42734a}
+
+
+imprime todas las entradas del conjunto 
+
+\begin{DoxyPostcond}{Postcondición}
+No se modifica el conjunto. 
+\end{DoxyPostcond}
+\begin{DoxyRefDesc}{Tareas pendientes}
+\item[\hyperlink{todo__todo000004}{Tareas pendientes}]implementar esta funcion \end{DoxyRefDesc}
+
+
+\subsubsection{Documentación de los datos miembro}
+\hypertarget{classconjunto_aed485e92bb3d8b2c82fc85657947761d}{\index{conjunto@{conjunto}!vc@{vc}}
+\index{vc@{vc}!conjunto@{conjunto}}
+\paragraph[{vc}]{\setlength{\rightskip}{0pt plus 5cm}vector$<${\bf crimen}$>$ conjunto\-::vc\hspace{0.3cm}{\ttfamily [private]}}}\label{classconjunto_aed485e92bb3d8b2c82fc85657947761d}
+
+
+La documentación para esta clase fue generada a partir del siguiente fichero\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{conjunto_8h}{conjunto.\-h}\end{DoxyCompactItemize}

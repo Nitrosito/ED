@@ -1,0 +1,253 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.6"/>
+<title>CONJUNTO de DELITOS: Documentación Práctica</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/search.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() { searchBox.OnSelectItem(0); });
+</script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td style="padding-left: 0.5em;">
+   <div id="projectname">CONJUNTO de DELITOS
+   &#160;<span id="projectnumber">V0</span>
+   </div>
+   <div id="projectbrief">Conjunto Ordenado de Crimenes</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Generado por Doxygen 1.8.6 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Buscar');
+</script>
+  <div id="navrow1" class="tabs">
+    <ul class="tablist">
+      <li class="current"><a href="index.html"><span>Página&#160;principal</span></a></li>
+      <li><a href="pages.html"><span>Páginas&#160;relacionadas</span></a></li>
+      <li><a href="annotated.html"><span>Clases</span></a></li>
+      <li><a href="files.html"><span>Archivos</span></a></li>
+      <li>
+        <div id="MSearchBox" class="MSearchBoxInactive">
+        <span class="left">
+          <img id="MSearchSelect" src="search/mag_sel.png"
+               onmouseover="return searchBox.OnSearchSelectShow()"
+               onmouseout="return searchBox.OnSearchSelectHide()"
+               alt=""/>
+          <input type="text" id="MSearchField" value="Buscar" accesskey="S"
+               onfocus="searchBox.OnSearchFieldFocus(true)" 
+               onblur="searchBox.OnSearchFieldFocus(false)" 
+               onkeyup="searchBox.OnSearchFieldChange(event)"/>
+          </span><span class="right">
+            <a id="MSearchClose" href="javascript:searchBox.CloseResultsWindow()"><img id="MSearchCloseImg" border="0" src="search/close.png" alt=""/></a>
+          </span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div><!-- top -->
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Todo</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Clases</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Archivos</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Funciones</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>&apos;typedefs&apos;</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Amigas</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Páginas</a></div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Documentación Práctica </div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="toc"><h3>Tabla de contenidos</h3>
+<ul><li class="level1"><a href="#introsec">Introducción</a><ul><li class="level2"><a href="#baseDatos">Conjunto de Datos</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#fecha">"Fecha Límite de Entrega"</a></li>
+<li class="level1"><a href="#crime">Crimen</a></li>
+<li class="level1"><a href="#dicc">Conjunto como TDA contenedor de información</a></li>
+<li class="level1"><a href="#sec_tar">"Se Entrega / Se Pide"</a><ul><li class="level2"><a href="#ssEntrega">Se entrega</a></li>
+<li class="level2"><a href="#ssPide">Se Pide</a></li>
+</ul>
+</li>
+<li class="level1"><a href="#rep">Representación</a><ul><li class="level2"><a href="#fact_sec2">Función de Abstracción :</a></li>
+<li class="level2"><a href="#inv_sec2">Invariante de la Representación:</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="textblock"><dl class="section version"><dt>Versión</dt><dd>v0 </dd></dl>
+<dl class="section author"><dt>Autor</dt><dd>Juan F. Huete</dd></dl>
+<h1><a class="anchor" id="introsec"></a>
+Introducción</h1>
+<p>En esta practica se pretende avanzar en el uso de las estructuras de datos, para ello comenzaremos con el diseño de distintos tipos de datos que nos permitan manejar la información asociada a la base de datos de delitos de la ciudad de Chicago (EEUU)</p>
+<h2><a class="anchor" id="baseDatos"></a>
+Conjunto de Datos</h2>
+<p>El conjunto de datos con el que trabajaremos es un subconjunto de la base de datos de la City of Chicago, "Crimes-2001 to present" los informes sobre delitos (con la excepción de asesinatos) que han ocurrido en la ciudad de Chicago (EEUU) desde 2001 hasta el presente (menos la última semana). Los datos son extraidos del "Chicago Police Department's CLEAR (Citizen Law Enforcement Analysis and Reporting)". La base de datos original, con unos 6 millones de delitos, se puede obtener entre otros en formato csv (del inglés comma-separated values, que representa una tabla, en las que las columnas se separan por comas y las filas por saltos de línea. Así, la primera línea del fichero indica los campos de la base de datos, y el resto de líneas la descripción asociada a cada delito,</p>
+<div class="fragment"><div class="line">ID,Case Number,Date,Block,IUCR,Primary Type,Description,Location Description,Arr</div>
+<div class="line">est,Domestic,Beat,District,Ward,Community Area,FBI Code,X Coordinate,Y Coordinat</div>
+<div class="line">e,Year,Updated On,Latitude,Longitude,Location</div>
+<div class="line">10230953,HY418703,09/10/2015 11:56:00 PM,048XX W NORTH AVE,0498,BATTERY,AGGRAVAT</div>
+<div class="line">ED DOMESTIC BATTERY: HANDS/FIST/FEET SERIOUS INJURY,APARTMENT,<span class="keyword">true</span>,<span class="keyword">true</span>,2533,025</div>
+<div class="line">,37,25,04B,1143637,1910194,2015,09/17/2015 11:37:18 AM,41.909605035,-87.74777714</div>
+<div class="line">5,<span class="stringliteral">&quot;(41.909605035, -87.747777145)&quot;</span></div>
+<div class="line">10230979,HY418750,09/10/2015 11:55:00 PM,120XX S PARNELL AVE,0486,BATTERY,DOMEST</div>
+<div class="line">IC BATTERY SIMPLE,ALLEY,<span class="keyword">true</span>,<span class="keyword">true</span>,0523,005,34,53,08B,1174806,1825089,2015,09/17/</div>
+<div class="line">2015 11:37:18 AM,41.675427135,-87.63581257,<span class="stringliteral">&quot;(41.675427135, -87.63581257)&quot;</span></div>
+<div class="line">10231208,HY418843,09/10/2015 11:50:00 PM,021XX W BERWYN AVE,0820,THEFT,$500 AND </div>
+<div class="line">UNDER,STREET,<span class="keyword">false</span>,<span class="keyword">false</span>,2012,020,40,4,06,1161036,1935171,2015,09/17/2015 11:37:</div>
+<div class="line">18 AM,41.97779966,-87.683164484,<span class="stringliteral">&quot;(41.97779966, -87.683164484)&quot;</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="fecha"></a>
+"Fecha Límite de Entrega"</h1>
+<p>C++ no tiene un tipo propio para trabajar con fechas, por lo que debemos implementar la clase fecha que deberá tener entre otros los métodos abajo indicados. La especificación de la clase fecha se realizará en el fichero <a class="el" href="fecha_8h.html">fecha.h</a> y la implementación de la clase fecha la haremos en el fichero <a class="el" href="fecha_8hxx.html">fecha.hxx</a>.</p>
+<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="classfecha.html">fecha</a> {</div>
+<div class="line"><span class="keyword">private</span>:</div>
+<div class="line">  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a09eb9f4865c9ff896f438b8df3cf6485">sec</a>;   <span class="comment">// seconds of minutes from 0 to 61</span></div>
+<div class="line">  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a3875f28ff6e7c383923c80e86afaec2e">min</a>;   <span class="comment">// minutes of hour from 0 to 59</span></div>
+<div class="line">  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a895a2cc9dd11326a8392a4c6fc928a14">hour</a>;  <span class="comment">// hours of day from 0 to 24</span></div>
+<div class="line">  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a9c1dc50e5f5efcd3e30a981bfd495b1d">mday</a>;  <span class="comment">// day of month from 1 to 31</span></div>
+<div class="line">  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a5c86be74f1215600f99798d54126ba16">mon</a>;   <span class="comment">// month of year from 0 to 11</span></div>
+<div class="line">  <span class="keywordtype">int</span>  <a class="code" href="classfecha.html#a4d06534f05a6350ae229ce2b17b860e8">year</a>;  <span class="comment">// year since 2000</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">public</span>:</div>
+<div class="line"> <a class="code" href="classfecha.html#a6775ef84b5838e12e28fd341793f4539">fecha</a> (); <span class="comment">//Constructor de fecha por defecto</span></div>
+<div class="line"> <a class="code" href="classfecha.html#a6775ef84b5838e12e28fd341793f4539">fecha</a> (<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s); <span class="comment">// s es un string con el formato mm/dd/aaaa  hh:mm:ss AM/PM</span></div>
+<div class="line"></div>
+<div class="line"> <a class="code" href="classfecha.html">fecha</a> &amp; <a class="code" href="classfecha.html#ac7f5398b71cbccc4cd74f8c5e56b80ce">operator=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f);</div>
+<div class="line"> <a class="code" href="classfecha.html">fecha</a> &amp; <a class="code" href="classfecha.html#ac7f5398b71cbccc4cd74f8c5e56b80ce">operator=</a>(<span class="keyword">const</span> <span class="keywordtype">string</span> &amp; s); <span class="comment">// s es un string con el formato mm/dd/aaaa hh:mm:ss AM/PM</span></div>
+<div class="line"> <span class="keywordtype">string</span> <a class="code" href="classfecha.html#a26d22b980284408eac0da084f358c43b">toString</a>() <span class="keyword">const</span>;</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// Operadores relacionales</span></div>
+<div class="line">  <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#ac971e131a6e3edf57c2313468524f364">operator==</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f) <span class="keyword">const</span>;</div>
+<div class="line"> <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a27803300b9698e1a40ef48f2009948c5">operator&lt;</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f)<span class="keyword">const</span>;</div>
+<div class="line"> <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#aaded7646e80d88492b31b17b4fb001fd">operator&gt;</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f) <span class="keyword">const</span>;</div>
+<div class="line"> <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a8dfb2f2a7424bdb1dacc6df122b0a0c8">operator&lt;=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f)<span class="keyword">const</span>;</div>
+<div class="line"> <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a98d0f3009cb7205b5ddb3b81596d9cc7">operator&gt;=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f) <span class="keyword">const</span>;</div>
+<div class="line"> <span class="keywordtype">bool</span> <a class="code" href="classfecha.html#a1f6d28759c45b138efb80d25a7c398b8">operator!=</a>(<span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f)<span class="keyword">const</span>;</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"> ostream&amp; <a class="code" href="fecha_8h.html#a9787de38b43ae62ba2c0812f3dd18394">operator&lt;&lt; </a>( ostream&amp; os, <span class="keyword">const</span> <a class="code" href="classfecha.html">fecha</a> &amp; f); imprime <a class="code" href="classfecha.html">fecha</a> con el formato  mm/dd/aaaa hh:mm:ss AM/PM</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;<a class="code" href="fecha_8hxx.html">fecha.hxx</a>&quot;</span> <span class="comment">// Incluimos la implementacion.</span></div>
+</div><!-- fragment --><p>Así, podremos trabajar con fechas como indica el siguiente código </p>
+<div class="fragment"><div class="line">...</div>
+<div class="line">fecha f1;</div>
+<div class="line">f1 = <span class="stringliteral">&quot;09/10/2015 11:55:00 PM&quot;</span>;</div>
+<div class="line"><a class="code" href="classfecha.html">fecha</a> f2(f1);</div>
+<div class="line">...</div>
+<div class="line">fecha f3 = <span class="stringliteral">&quot;09/04/2010 11:55:00 PM&quot;</span></div>
+<div class="line">..</div>
+<div class="line"><span class="keywordflow">if</span> (f1&lt;f3) </div>
+<div class="line">  cout &lt;&lt; f1 &lt;&lt; <span class="stringliteral">&quot; es menor que &quot;</span> f3;</div>
+<div class="line">...</div>
+</div><!-- fragment --><h1><a class="anchor" id="crime"></a>
+Crimen</h1>
+<p>A igual que con la clase fecha, la especificación del tipo crimen y su implementación se realizará en los ficheros <a class="el" href="crimen_8h.html">crimen.h</a> y crimen.hxx, respectivamente, y debe tener la información de los atributos (con su representacion asociada)</p>
+<ul>
+<li>ID: identificador del delito (long int) </li>
+<li>Case Number: Código del caso (string) </li>
+<li>Date: Fecha en formato mm/dd/aaaa hh:mm:ss AM/PM (fecha, ver arriba) </li>
+<li>IUCR: Código del tipo de delito según Illinois Uniform Crime Reporting, IUCR (string) </li>
+<li>Primary Type: Tipo de delito (string) </li>
+<li>Description: Descripción más detallada (string) </li>
+<li>Location Description: Descripción del tipo de localización (string) </li>
+<li>Arrest: Si hay arrestos o no (boolean) </li>
+<li>Domestic: Si es un crimen domenstico o no (boolean) </li>
+<li>Latitude: Coordenada de latitud (double) </li>
+<li>Longitude: Coordenad de longitud (double)</li>
+</ul>
+<div class="fragment"><div class="line"><span class="comment">// Fichero crimen.h  </span></div>
+<div class="line"><span class="keyword">class </span><a class="code" href="classcrimen.html">crimen</a> {</div>
+<div class="line"> ....</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="preprocessor">#include &quot;crimen.hxx&quot;</span> <span class="comment">// Incluimos la implementacion</span></div>
+</div><!-- fragment --><h1><a class="anchor" id="dicc"></a>
+Conjunto como TDA contenedor de información</h1>
+<p>Nuestro conjunto será un contenedor que permite almacenar la información de la base de datos de delitos. Para un mejor acceso, los elementos deben estar ordenados según ID, en orden creciente. Como TDA, lo vamos a dotar de un conjunto restringido de métodos (inserción de elementos, consulta de un elemento por ID, etc.). Este diccionario "simulará" un set de la stl, con algunas claras diferencias pues, entre otros, no estará dotado de la capacidad de iterar (recorrer) a través de sus elementos, que se hará en las siguientes prácticas.</p>
+<p>Asociado al conjunto, tendremos los tipos </p>
+<div class="fragment"><div class="line"><a class="code" href="classcrimen.html">conjunto::entrada</a></div>
+<div class="line"></div>
+<div class="line"><a class="code" href="classconjunto.html#a855a5893bb0f5a851ab2dbf2b8aa6cc7">conjunto::size_type</a></div>
+</div><!-- fragment --><p> que permiten hacer referencia a los elementos almacenados en cada una de las posiciones y el número de elementos del mismo, respectivamente.</p>
+<h1><a class="anchor" id="sec_tar"></a>
+"Se Entrega / Se Pide"</h1>
+<h2><a class="anchor" id="ssEntrega"></a>
+Se entrega</h2>
+<p>En esta práctica se entrega los fuentes necesarios para generar la documentación de este proyecto así como el código necesario para resolver este problema. En concreto los ficheros que se entregan son:</p>
+<ul>
+<li>documentacion.pdf Documentación de la práctica en pdf. </li>
+<li>dox_diccionario Este fichero contiene el fichero de configuración de doxigen necesario para generar la documentación del proyecto (html y pdf). Para ello, basta con ejecutar desde la línea de comando <div class="fragment"><div class="line">doxygen doxPractica</div>
+</div><!-- fragment --> La documentación en html la podemos encontrar en el fichero ./html/index.html, para generar la documentación en latex es suficiente con hacer los siguientes pasos <div class="fragment"><div class="line">cd latex</div>
+<div class="line">make</div>
+</div><!-- fragment --> como resultado tendremos el fichero refman.pdf que incluye toda la documentación generada.</li>
+</ul>
+<ul>
+<li><a class="el" href="conjunto_8h.html">conjunto.h</a> Especificación del TDA conjunto. </li>
+<li>conjunto.hxx plantilla de fichero donde debemos implementar el conjunto. </li>
+<li><a class="el" href="crimen_8h.html">crimen.h</a> Plantilla para la especificación del TDA crimen </li>
+<li>crimen.hxx plantilla de fichero donde debemos implementar el crimen </li>
+<li><a class="el" href="fecha_8h.html">fecha.h</a> Plantilla para la especificación del TDA fecha </li>
+<li><a class="el" href="fecha_8hxx.html">fecha.hxx</a> plantilla de fichero donde debemos implementarlo</li>
+</ul>
+<ul>
+<li><a class="el" href="principal_8cpp.html">principal.cpp</a> fichero donde se incluye el main del programa. En este caso, se toma como entrada el fichero de datos "crimenes.csv" y se debe cargar en el set.</li>
+</ul>
+<h2><a class="anchor" id="ssPide"></a>
+Se Pide</h2>
+<ul>
+<li>Diseñar la función de abstracción e invariante de la representación del tipo fecha </li>
+<li>Diseñar la función de abstracción e invariante de la representación del tipo crimen. </li>
+<li>Se pide implementar el código asociado a los ficheros .hxx. </li>
+<li>Analizar la eficiencia teórica y empírica de las operaciones de insercion y búsqueda en el conjunto.</li>
+</ul>
+<h1><a class="anchor" id="rep"></a>
+Representación</h1>
+<p>El alumno deberá realizar una implementación utilizando como base el TDA vector de la STL. En particular, la representación que se utiliza es un vector ordenado de entradas, teniendo en cuenta el valor de la clave ID.</p>
+<h2><a class="anchor" id="fact_sec2"></a>
+Función de Abstracción :</h2>
+<p>Función de Abstracción: AF: Rep =&gt; Abs </p>
+<pre class="fragment">dado C =(vector&lt;crimen&gt; vc ) ==&gt; Conjunto BD;
+</pre><p>Un objeto abstracto, BD, representando una colección ORDENADA de crimenes según ID, se instancia en la clase conjunto como un vector ordenado de crimenes,</p>
+<h2><a class="anchor" id="inv_sec2"></a>
+Invariante de la Representación:</h2>
+<p>Propiedades que debe cumplir cualquier objeto</p>
+<div class="fragment"><div class="line">BD.size() == C.vc.size();</div>
+<div class="line"></div>
+<div class="line">Para todo i, 0 &lt;= i &lt; V.vc.size() se cumple</div>
+<div class="line">    C.vc[i].ID &gt; 0;</div>
+<div class="line">Para todo i, 0 &lt;= i &lt; D.dic.size()-1 se cumple</div>
+<div class="line">    C.vc[i].ID&lt;= D.dic[i+1].ID</div>
+</div><!-- fragment --><h1><a class="anchor" id="fecha"></a>
+"Fecha Límite de Entrega"</h1>
+<p>La fecha límite de entrega será el 6 de Noviembre. </p>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Generado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.6
+</small></address>
+</body>
+</html>

@@ -1,0 +1,191 @@
+\hypertarget{classfecha}{\subsection{Referencia de la Clase fecha}
+\label{classfecha}\index{fecha@{fecha}}
+}
+
+
+Clase fecha, asociada a la.  
+
+
+
+
+{\ttfamily \#include $<$fecha.\-h$>$}
+
+\subsubsection*{Métodos públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classfecha_a6775ef84b5838e12e28fd341793f4539}{fecha} ()
+\begin{DoxyCompactList}\small\item\em fichero de implementacion de la clase fecha \end{DoxyCompactList}\item 
+\hyperlink{classfecha_aed5c22d5eeb15f1f2927d5a2c28b74df}{fecha} (const string \&s)
+\item 
+\hyperlink{classfecha}{fecha} \& \hyperlink{classfecha_ac7f5398b71cbccc4cd74f8c5e56b80ce}{operator=} (const \hyperlink{classfecha}{fecha} \&f)
+\item 
+\hyperlink{classfecha}{fecha} \& \hyperlink{classfecha_adf0cb1494d557581d89e3289ab121bc5}{operator=} (const string \&s)
+\item 
+string \hyperlink{classfecha_a26d22b980284408eac0da084f358c43b}{to\-String} () const 
+\item 
+bool \hyperlink{classfecha_ac971e131a6e3edf57c2313468524f364}{operator==} (const \hyperlink{classfecha}{fecha} \&f) const 
+\item 
+bool \hyperlink{classfecha_a27803300b9698e1a40ef48f2009948c5}{operator$<$} (const \hyperlink{classfecha}{fecha} \&f) const 
+\item 
+bool \hyperlink{classfecha_aaded7646e80d88492b31b17b4fb001fd}{operator$>$} (const \hyperlink{classfecha}{fecha} \&f) const 
+\item 
+bool \hyperlink{classfecha_a8dfb2f2a7424bdb1dacc6df122b0a0c8}{operator$<$=} (const \hyperlink{classfecha}{fecha} \&f) const 
+\item 
+bool \hyperlink{classfecha_a98d0f3009cb7205b5ddb3b81596d9cc7}{operator$>$=} (const \hyperlink{classfecha}{fecha} \&f) const 
+\item 
+bool \hyperlink{classfecha_a1f6d28759c45b138efb80d25a7c398b8}{operator!=} (const \hyperlink{classfecha}{fecha} \&f) const 
+\end{DoxyCompactItemize}
+\subsubsection*{Atributos privados}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{classfecha_a09eb9f4865c9ff896f438b8df3cf6485}{sec}
+\item 
+int \hyperlink{classfecha_a3875f28ff6e7c383923c80e86afaec2e}{min}
+\item 
+int \hyperlink{classfecha_a895a2cc9dd11326a8392a4c6fc928a14}{hour}
+\item 
+int \hyperlink{classfecha_a9c1dc50e5f5efcd3e30a981bfd495b1d}{mday}
+\item 
+int \hyperlink{classfecha_a5c86be74f1215600f99798d54126ba16}{mon}
+\item 
+int \hyperlink{classfecha_a4d06534f05a6350ae229ce2b17b860e8}{year}
+\end{DoxyCompactItemize}
+\subsubsection*{Amigas}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{classfecha_a9787de38b43ae62ba2c0812f3dd18394}{operator$<$$<$} (ostream \&os, const \hyperlink{classfecha}{fecha} \&f)
+\end{DoxyCompactItemize}
+
+
+\subsubsection{Descripción detallada}
+Clase fecha, asociada a la. 
+
+\hyperlink{classfecha_a6775ef84b5838e12e28fd341793f4539}{fecha\-::fecha}, ..... Descripción contiene toda la información asociada a una fecha con el formato mm/dd/aaaa hh\-:mm\-:ss A\-M/\-P\-M \begin{DoxyRefDesc}{Tareas pendientes}
+\item[\hyperlink{todo__todo000001}{Tareas pendientes}]Escribe la documentación de la clase 
+
+Implementar esta clase\end{DoxyRefDesc}
+
+
+\subsubsection{Documentación del constructor y destructor}
+\hypertarget{classfecha_a6775ef84b5838e12e28fd341793f4539}{\index{fecha@{fecha}!fecha@{fecha}}
+\index{fecha@{fecha}!fecha@{fecha}}
+\paragraph[{fecha}]{\setlength{\rightskip}{0pt plus 5cm}fecha\-::fecha (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classfecha_a6775ef84b5838e12e28fd341793f4539}
+
+
+fichero de implementacion de la clase fecha 
+
+\hypertarget{classfecha_aed5c22d5eeb15f1f2927d5a2c28b74df}{\index{fecha@{fecha}!fecha@{fecha}}
+\index{fecha@{fecha}!fecha@{fecha}}
+\paragraph[{fecha}]{\setlength{\rightskip}{0pt plus 5cm}fecha\-::fecha (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classfecha_aed5c22d5eeb15f1f2927d5a2c28b74df}
+
+
+\subsubsection{Documentación de las funciones miembro}
+\hypertarget{classfecha_a1f6d28759c45b138efb80d25a7c398b8}{\index{fecha@{fecha}!operator!=@{operator!=}}
+\index{operator!=@{operator!=}!fecha@{fecha}}
+\paragraph[{operator!=}]{\setlength{\rightskip}{0pt plus 5cm}bool fecha\-::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_a1f6d28759c45b138efb80d25a7c398b8}
+\hypertarget{classfecha_a27803300b9698e1a40ef48f2009948c5}{\index{fecha@{fecha}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!fecha@{fecha}}
+\paragraph[{operator$<$}]{\setlength{\rightskip}{0pt plus 5cm}bool fecha\-::operator$<$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_a27803300b9698e1a40ef48f2009948c5}
+\hypertarget{classfecha_a8dfb2f2a7424bdb1dacc6df122b0a0c8}{\index{fecha@{fecha}!operator$<$=@{operator$<$=}}
+\index{operator$<$=@{operator$<$=}!fecha@{fecha}}
+\paragraph[{operator$<$=}]{\setlength{\rightskip}{0pt plus 5cm}bool fecha\-::operator$<$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_a8dfb2f2a7424bdb1dacc6df122b0a0c8}
+\hypertarget{classfecha_ac7f5398b71cbccc4cd74f8c5e56b80ce}{\index{fecha@{fecha}!operator=@{operator=}}
+\index{operator=@{operator=}!fecha@{fecha}}
+\paragraph[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fecha}\& fecha\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+)}}\label{classfecha_ac7f5398b71cbccc4cd74f8c5e56b80ce}
+\hypertarget{classfecha_adf0cb1494d557581d89e3289ab121bc5}{\index{fecha@{fecha}!operator=@{operator=}}
+\index{operator=@{operator=}!fecha@{fecha}}
+\paragraph[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}{\bf fecha}\& fecha\-::operator= (
+\begin{DoxyParamCaption}
+\item[{const string \&}]{s}
+\end{DoxyParamCaption}
+)}}\label{classfecha_adf0cb1494d557581d89e3289ab121bc5}
+\hypertarget{classfecha_ac971e131a6e3edf57c2313468524f364}{\index{fecha@{fecha}!operator==@{operator==}}
+\index{operator==@{operator==}!fecha@{fecha}}
+\paragraph[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}bool fecha\-::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_ac971e131a6e3edf57c2313468524f364}
+\hypertarget{classfecha_aaded7646e80d88492b31b17b4fb001fd}{\index{fecha@{fecha}!operator$>$@{operator$>$}}
+\index{operator$>$@{operator$>$}!fecha@{fecha}}
+\paragraph[{operator$>$}]{\setlength{\rightskip}{0pt plus 5cm}bool fecha\-::operator$>$ (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_aaded7646e80d88492b31b17b4fb001fd}
+\hypertarget{classfecha_a98d0f3009cb7205b5ddb3b81596d9cc7}{\index{fecha@{fecha}!operator$>$=@{operator$>$=}}
+\index{operator$>$=@{operator$>$=}!fecha@{fecha}}
+\paragraph[{operator$>$=}]{\setlength{\rightskip}{0pt plus 5cm}bool fecha\-::operator$>$= (
+\begin{DoxyParamCaption}
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_a98d0f3009cb7205b5ddb3b81596d9cc7}
+\hypertarget{classfecha_a26d22b980284408eac0da084f358c43b}{\index{fecha@{fecha}!to\-String@{to\-String}}
+\index{to\-String@{to\-String}!fecha@{fecha}}
+\paragraph[{to\-String}]{\setlength{\rightskip}{0pt plus 5cm}string fecha\-::to\-String (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const}}\label{classfecha_a26d22b980284408eac0da084f358c43b}
+
+
+\subsubsection{Documentación de las funciones relacionadas y clases amigas}
+\hypertarget{classfecha_a9787de38b43ae62ba2c0812f3dd18394}{\index{fecha@{fecha}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!fecha@{fecha}}
+\paragraph[{operator$<$$<$}]{\setlength{\rightskip}{0pt plus 5cm}ostream\& operator$<$$<$ (
+\begin{DoxyParamCaption}
+\item[{ostream \&}]{os, }
+\item[{const {\bf fecha} \&}]{f}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [friend]}}}\label{classfecha_a9787de38b43ae62ba2c0812f3dd18394}
+
+
+\subsubsection{Documentación de los datos miembro}
+\hypertarget{classfecha_a895a2cc9dd11326a8392a4c6fc928a14}{\index{fecha@{fecha}!hour@{hour}}
+\index{hour@{hour}!fecha@{fecha}}
+\paragraph[{hour}]{\setlength{\rightskip}{0pt plus 5cm}int fecha\-::hour\hspace{0.3cm}{\ttfamily [private]}}}\label{classfecha_a895a2cc9dd11326a8392a4c6fc928a14}
+\hypertarget{classfecha_a9c1dc50e5f5efcd3e30a981bfd495b1d}{\index{fecha@{fecha}!mday@{mday}}
+\index{mday@{mday}!fecha@{fecha}}
+\paragraph[{mday}]{\setlength{\rightskip}{0pt plus 5cm}int fecha\-::mday\hspace{0.3cm}{\ttfamily [private]}}}\label{classfecha_a9c1dc50e5f5efcd3e30a981bfd495b1d}
+\hypertarget{classfecha_a3875f28ff6e7c383923c80e86afaec2e}{\index{fecha@{fecha}!min@{min}}
+\index{min@{min}!fecha@{fecha}}
+\paragraph[{min}]{\setlength{\rightskip}{0pt plus 5cm}int fecha\-::min\hspace{0.3cm}{\ttfamily [private]}}}\label{classfecha_a3875f28ff6e7c383923c80e86afaec2e}
+\hypertarget{classfecha_a5c86be74f1215600f99798d54126ba16}{\index{fecha@{fecha}!mon@{mon}}
+\index{mon@{mon}!fecha@{fecha}}
+\paragraph[{mon}]{\setlength{\rightskip}{0pt plus 5cm}int fecha\-::mon\hspace{0.3cm}{\ttfamily [private]}}}\label{classfecha_a5c86be74f1215600f99798d54126ba16}
+\hypertarget{classfecha_a09eb9f4865c9ff896f438b8df3cf6485}{\index{fecha@{fecha}!sec@{sec}}
+\index{sec@{sec}!fecha@{fecha}}
+\paragraph[{sec}]{\setlength{\rightskip}{0pt plus 5cm}int fecha\-::sec\hspace{0.3cm}{\ttfamily [private]}}}\label{classfecha_a09eb9f4865c9ff896f438b8df3cf6485}
+\hypertarget{classfecha_a4d06534f05a6350ae229ce2b17b860e8}{\index{fecha@{fecha}!year@{year}}
+\index{year@{year}!fecha@{fecha}}
+\paragraph[{year}]{\setlength{\rightskip}{0pt plus 5cm}int fecha\-::year\hspace{0.3cm}{\ttfamily [private]}}}\label{classfecha_a4d06534f05a6350ae229ce2b17b860e8}
+
+
+La documentación para esta clase fue generada a partir de los siguientes ficheros\-:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{fecha_8h}{fecha.\-h}\item 
+\hyperlink{fecha_8hxx}{fecha.\-hxx}\end{DoxyCompactItemize}
