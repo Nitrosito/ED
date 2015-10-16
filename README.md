@@ -1,2 +1,2 @@
 # ED
-Programas realizados en la asignatura Estructrura de Datos.
+Programas realizados en la asignatura Estructrura de Datos
