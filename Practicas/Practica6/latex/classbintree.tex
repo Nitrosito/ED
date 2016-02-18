@@ -1,0 +1,475 @@
+\hypertarget{classbintree}{}\section{bintree$<$ T $>$ Class Template Reference}
+\label{classbintree}\index{bintree$<$ T $>$@{bintree$<$ T $>$}}
+
+
+{\ttfamily \#include $<$bintree.\+h$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classbintree_1_1const__inorder__iterator}{const\+\_\+inorder\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1const__level__iterator}{const\+\_\+level\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1const__node}{const\+\_\+node}
+\item 
+class \hyperlink{classbintree_1_1const__postorder__iterator}{const\+\_\+postorder\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1const__preorder__iterator}{const\+\_\+preorder\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1inorder__iterator}{inorder\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1level__iterator}{level\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1node}{node}
+\item 
+class \hyperlink{classbintree_1_1postorder__iterator}{postorder\+\_\+iterator}
+\item 
+class \hyperlink{classbintree_1_1preorder__iterator}{preorder\+\_\+iterator}
+\end{DoxyCompactItemize}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{classbintree_a267f374b5d239f2415552901c864179f}{}typedef unsigned int {\bfseries size\+\_\+type}\label{classbintree_a267f374b5d239f2415552901c864179f}
+
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classbintree_a9fed4a26a9c177dfa14a9cb573b43dca}{bintree} ()
+\begin{DoxyCompactList}\small\item\em Constructor primitivo por defecto. \end{DoxyCompactList}\item 
+\hyperlink{classbintree_a21aaa03b1510c5ffa52236d2a8973273}{bintree} (const T \&e)
+\begin{DoxyCompactList}\small\item\em Constructor primitivo. \end{DoxyCompactList}\item 
+\hyperlink{classbintree_a4658c6df869d8b35a72b6cbcf410bc5f}{bintree} (const \hyperlink{classbintree}{bintree}$<$ T $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Constructor de copia. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_ab5fb2e54f418de017ba23a2b7084e67e}{assign\+\_\+subtree} (const \hyperlink{classbintree}{bintree}$<$ T $>$ \&a, \hyperlink{classbintree_1_1node}{node} n)
+\begin{DoxyCompactList}\small\item\em Reemplaza el receptor por una copia de subárbol. \end{DoxyCompactList}\item 
+\hyperlink{classbintree_a7f32fcbdc9aed453025a13cbe93e3b89}{$\sim$bintree} ()
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\hyperlink{classbintree}{bintree}$<$ T $>$ \& \hyperlink{classbintree_a188622dd3846630d2f69b11a2eba3896}{operator=} (const \hyperlink{classbintree}{bintree}$<$ T $>$ \&a)
+\begin{DoxyCompactList}\small\item\em Operador de asignación. \end{DoxyCompactList}\item 
+\hyperlink{classbintree_1_1node}{node} \hyperlink{classbintree_aa5d9c32204880ba5df3b31836d8720da}{root} () const 
+\begin{DoxyCompactList}\small\item\em Obtener el nodo raíz. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a74b4b7570b9b574391742f892520562b}{prune\+\_\+left} (\hyperlink{classbintree_1_1node}{node} n, \hyperlink{classbintree}{bintree}$<$ T $>$ \&dest)
+\begin{DoxyCompactList}\small\item\em Podar el subárbol a la izquierda de un nodo. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_ae468b92dd3eb70818ffbd969ff34d811}{prune\+\_\+right} (\hyperlink{classbintree_1_1node}{node} n, \hyperlink{classbintree}{bintree}$<$ T $>$ \&dest)
+\begin{DoxyCompactList}\small\item\em Podar el subárbol a la derecha de un nodo. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a49d681962f17c3ef0b63ddd529d15e6a}{insert\+\_\+left} (const \hyperlink{classbintree}{bintree}$<$ T $>$\+::\hyperlink{classbintree_1_1node}{node} \&n, const T \&e)
+\begin{DoxyCompactList}\small\item\em Insertar un nodo como hijo a la izquierda de un nodo. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a17611b995af1d5421197d155e75e683f}{insert\+\_\+left} (\hyperlink{classbintree_1_1node}{node} n, \hyperlink{classbintree}{bintree}$<$ T $>$ \&rama)
+\begin{DoxyCompactList}\small\item\em Insertar un árbol como subárbol a la izquierda de un nodo. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a8f25464ce656370a6ab5d56ac56a3b5e}{insert\+\_\+right} (\hyperlink{classbintree_1_1node}{node} n, const T \&e)
+\begin{DoxyCompactList}\small\item\em Insertar un nodo como hijo a la derecha de un nodo. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a01c798112c64624e3e90ed027bfd76e1}{insert\+\_\+right} (\hyperlink{classbintree_1_1node}{node} n, \hyperlink{classbintree}{bintree}$<$ T $>$ \&rama)
+\begin{DoxyCompactList}\small\item\em Insertar un árbol como subárbol a la derecha de un nodo. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a2078f7f9254a84b592fdb1f2e2f9238a}{clear} ()
+\begin{DoxyCompactList}\small\item\em Hace nulo un árbol. \end{DoxyCompactList}\item 
+size\+\_\+type \hyperlink{classbintree_a05abb18037587082a67fb4d4d2f5733f}{size} () const 
+\begin{DoxyCompactList}\small\item\em Obtiene el número de nodos. \end{DoxyCompactList}\item 
+bool \hyperlink{classbintree_a772126c3e8b7cd37e5a93ccbda01f8dd}{empty} () const 
+\begin{DoxyCompactList}\small\item\em Comprueba si un árbol está vacío (es nulo). \end{DoxyCompactList}\item 
+bool \hyperlink{classbintree_a29438cd817b1d27ccc10d46676ba6bef}{operator==} (const \hyperlink{classbintree}{bintree}$<$ T $>$ \&a) const 
+\begin{DoxyCompactList}\small\item\em Operador de comparación de igualdad. \end{DoxyCompactList}\item 
+bool \hyperlink{classbintree_a80e397f887ebad1ef974ec7722430a6c}{operator!=} (const \hyperlink{classbintree}{bintree}$<$ T $>$ \&a) const 
+\begin{DoxyCompactList}\small\item\em Operador de comparación de desigualdad. \end{DoxyCompactList}\item 
+void \hyperlink{classbintree_a75647277e4d20981651450e86ffad165}{replace\+\_\+subtree} (\hyperlink{classbintree_1_1node}{node} pos, const \hyperlink{classbintree}{bintree}$<$ T $>$ \&a, \hyperlink{classbintree_1_1node}{node} n)
+\begin{DoxyCompactList}\small\item\em Reemplaza el subárbol a partir de pos por una copia de subárbol. \end{DoxyCompactList}\item 
+\hypertarget{classbintree_aa03570e8e81b0f6e12a0901caa631973}{}\hyperlink{classbintree_1_1preorder__iterator}{preorder\+\_\+iterator} {\bfseries begin\+\_\+preorder} ()\label{classbintree_aa03570e8e81b0f6e12a0901caa631973}
+
+\item 
+\hypertarget{classbintree_a5d0252ac17ef93a03f86c712650724af}{}\hyperlink{classbintree_1_1preorder__iterator}{preorder\+\_\+iterator} {\bfseries end\+\_\+preorder} ()\label{classbintree_a5d0252ac17ef93a03f86c712650724af}
+
+\item 
+\hypertarget{classbintree_ac0e75f2d7528b74174f0733e19e31024}{}\hyperlink{classbintree_1_1const__preorder__iterator}{const\+\_\+preorder\+\_\+iterator} {\bfseries begin\+\_\+preorder} () const \label{classbintree_ac0e75f2d7528b74174f0733e19e31024}
+
+\item 
+\hypertarget{classbintree_a46866eba9135e02bf020ea3d3be9955b}{}\hyperlink{classbintree_1_1const__preorder__iterator}{const\+\_\+preorder\+\_\+iterator} {\bfseries end\+\_\+preorder} () const \label{classbintree_a46866eba9135e02bf020ea3d3be9955b}
+
+\item 
+\hypertarget{classbintree_af24d2fffd7aea66b878f214b906cb4aa}{}\hyperlink{classbintree_1_1inorder__iterator}{inorder\+\_\+iterator} {\bfseries begin\+\_\+inorder} ()\label{classbintree_af24d2fffd7aea66b878f214b906cb4aa}
+
+\item 
+\hypertarget{classbintree_a01bef6192ff6547bd468847efb9f7cd5}{}\hyperlink{classbintree_1_1inorder__iterator}{inorder\+\_\+iterator} {\bfseries end\+\_\+inorder} ()\label{classbintree_a01bef6192ff6547bd468847efb9f7cd5}
+
+\item 
+\hypertarget{classbintree_a7285974b783b29b0d10afefcd5658009}{}\hyperlink{classbintree_1_1const__inorder__iterator}{const\+\_\+inorder\+\_\+iterator} {\bfseries begin\+\_\+inorder} () const \label{classbintree_a7285974b783b29b0d10afefcd5658009}
+
+\item 
+\hypertarget{classbintree_a82517ce696efe08798b7e9d59c2a0d3d}{}\hyperlink{classbintree_1_1const__inorder__iterator}{const\+\_\+inorder\+\_\+iterator} {\bfseries end\+\_\+inorder} () const \label{classbintree_a82517ce696efe08798b7e9d59c2a0d3d}
+
+\item 
+\hypertarget{classbintree_a2e98e109ca6c2ac9649769e2e32dbae9}{}\hyperlink{classbintree_1_1postorder__iterator}{postorder\+\_\+iterator} {\bfseries begin\+\_\+postorder} ()\label{classbintree_a2e98e109ca6c2ac9649769e2e32dbae9}
+
+\item 
+\hypertarget{classbintree_a71f0650c6fb2d11eec3f8bf36231fe0b}{}\hyperlink{classbintree_1_1postorder__iterator}{postorder\+\_\+iterator} {\bfseries end\+\_\+postorder} ()\label{classbintree_a71f0650c6fb2d11eec3f8bf36231fe0b}
+
+\item 
+\hypertarget{classbintree_abd8fb69e96f1326b8d1745ccd1833352}{}\hyperlink{classbintree_1_1const__postorder__iterator}{const\+\_\+postorder\+\_\+iterator} {\bfseries begin\+\_\+postorder} () const \label{classbintree_abd8fb69e96f1326b8d1745ccd1833352}
+
+\item 
+\hypertarget{classbintree_a1d07a09dcecab8ac31ac5978166849d3}{}\hyperlink{classbintree_1_1const__postorder__iterator}{const\+\_\+postorder\+\_\+iterator} {\bfseries end\+\_\+postorder} () const \label{classbintree_a1d07a09dcecab8ac31ac5978166849d3}
+
+\item 
+\hypertarget{classbintree_ab806982263f4c480797e3addb07d9724}{}\hyperlink{classbintree_1_1level__iterator}{level\+\_\+iterator} {\bfseries begin\+\_\+level} ()\label{classbintree_ab806982263f4c480797e3addb07d9724}
+
+\item 
+\hypertarget{classbintree_a510c30fe888aa44af32ebeeacf61e495}{}\hyperlink{classbintree_1_1level__iterator}{level\+\_\+iterator} {\bfseries end\+\_\+level} ()\label{classbintree_a510c30fe888aa44af32ebeeacf61e495}
+
+\item 
+\hypertarget{classbintree_a294c19f33a55a82e0a535a8a3cc9eb0a}{}\hyperlink{classbintree_1_1const__level__iterator}{const\+\_\+level\+\_\+iterator} {\bfseries begin\+\_\+level} () const \label{classbintree_a294c19f33a55a82e0a535a8a3cc9eb0a}
+
+\item 
+\hypertarget{classbintree_adb0cc4036c25955ed92dd421af03001b}{}\hyperlink{classbintree_1_1const__level__iterator}{const\+\_\+level\+\_\+iterator} {\bfseries end\+\_\+level} () const \label{classbintree_adb0cc4036c25955ed92dd421af03001b}
+
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$class bintree$<$ T $>$}
+
+T\+D\+A bintree.
+
+Representa un árbol binario con nodos etiquetados con datos del tipo T.
+
+T debe tener definidas las operaciones\+:
+
+
+\begin{DoxyItemize}
+\item T \& operator=(const T \& e);
+\item bool operator!=(const T \& e);
+\item bool opertaor==(const T \& e);
+\end{DoxyItemize}
+
+Son mutables. Residen en memoria dinúmica.
+
+Un ejemplo de su uso\+: 
+\begin{DoxyCodeInclude}
+\end{DoxyCodeInclude}
+ 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classbintree_a9fed4a26a9c177dfa14a9cb573b43dca}{}\index{bintree@{bintree}!bintree@{bintree}}
+\index{bintree@{bintree}!bintree@{bintree}}
+\subsubsection[{bintree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf bintree}$<$ T $>$\+::{\bf bintree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a9fed4a26a9c177dfa14a9cb573b43dca}
+
+
+Constructor primitivo por defecto. 
+
+Crea un árbol nulo. \hypertarget{classbintree_a21aaa03b1510c5ffa52236d2a8973273}{}\index{bintree@{bintree}!bintree@{bintree}}
+\index{bintree@{bintree}!bintree@{bintree}}
+\subsubsection[{bintree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf bintree}$<$ T $>$\+::{\bf bintree} (
+\begin{DoxyParamCaption}
+\item[{const T \&}]{e}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a21aaa03b1510c5ffa52236d2a8973273}
+
+
+Constructor primitivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & Etiqueta para la raíz.\\
+\hline
+\end{DoxyParams}
+Crea un árbol con un único nodo etiquetado con e. \hypertarget{classbintree_a4658c6df869d8b35a72b6cbcf410bc5f}{}\index{bintree@{bintree}!bintree@{bintree}}
+\index{bintree@{bintree}!bintree@{bintree}}
+\subsubsection[{bintree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf bintree}$<$ T $>$\+::{\bf bintree} (
+\begin{DoxyParamCaption}
+\item[{const {\bf bintree}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a4658c6df869d8b35a72b6cbcf410bc5f}
+
+
+Constructor de copia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & árbol que se copia.\\
+\hline
+\end{DoxyParams}
+Crea un árbol duplicado exacto de a. \hypertarget{classbintree_a7f32fcbdc9aed453025a13cbe93e3b89}{}\index{bintree@{bintree}!````~bintree@{$\sim$bintree}}
+\index{````~bintree@{$\sim$bintree}!bintree@{bintree}}
+\subsubsection[{$\sim$bintree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf bintree}$<$ T $>$\+::$\sim${\bf bintree} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a7f32fcbdc9aed453025a13cbe93e3b89}
+
+
+Destructor. 
+
+Destruye el receptor liberando los recursos que ocupaba. 
+
+\subsection{Member Function Documentation}
+\hypertarget{classbintree_ab5fb2e54f418de017ba23a2b7084e67e}{}\index{bintree@{bintree}!assign\+\_\+subtree@{assign\+\_\+subtree}}
+\index{assign\+\_\+subtree@{assign\+\_\+subtree}!bintree@{bintree}}
+\subsubsection[{assign\+\_\+subtree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::assign\+\_\+subtree (
+\begin{DoxyParamCaption}
+\item[{const {\bf bintree}$<$ T $>$ \&}]{a, }
+\item[{{\bf node}}]{n}
+\end{DoxyParamCaption}
+)}\label{classbintree_ab5fb2e54f418de017ba23a2b7084e67e}
+
+
+Reemplaza el receptor por una copia de subárbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & Arbol desde el que se copia. \\
+\hline
+{\em n} & nodo raíz del subárbol que se copia.\\
+\hline
+\end{DoxyParams}
+El receptor se hace nulo y después se le asigna una copia del subárbol de a cuya raíz es n. \hypertarget{classbintree_a2078f7f9254a84b592fdb1f2e2f9238a}{}\index{bintree@{bintree}!clear@{clear}}
+\index{clear@{clear}!bintree@{bintree}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf bintree}$<$ T $>$\+::clear (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{classbintree_a2078f7f9254a84b592fdb1f2e2f9238a}
+
+
+Hace nulo un árbol. 
+
+Destruye todos los nodos del árbol receptor y lo hace un árbol nulo. \hypertarget{classbintree_a772126c3e8b7cd37e5a93ccbda01f8dd}{}\index{bintree@{bintree}!empty@{empty}}
+\index{empty@{empty}!bintree@{bintree}}
+\subsubsection[{empty}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf bintree}$<$ T $>$\+::empty (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a772126c3e8b7cd37e5a93ccbda01f8dd}
+
+
+Comprueba si un árbol está vacío (es nulo). 
+
+\begin{DoxyReturn}{Returns}
+true, si el receptor está vacío (es nulo). false, en otro caso. 
+\end{DoxyReturn}
+\hypertarget{classbintree_a49d681962f17c3ef0b63ddd529d15e6a}{}\index{bintree@{bintree}!insert\+\_\+left@{insert\+\_\+left}}
+\index{insert\+\_\+left@{insert\+\_\+left}!bintree@{bintree}}
+\subsubsection[{insert\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::insert\+\_\+left (
+\begin{DoxyParamCaption}
+\item[{const {\bf bintree}$<$ T $>$\+::{\bf node} \&}]{n, }
+\item[{const T \&}]{e}
+\end{DoxyParamCaption}
+)}\label{classbintree_a49d681962f17c3ef0b63ddd529d15e6a}
+
+
+Insertar un nodo como hijo a la izquierda de un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo del receptor. !n.null(). \\
+\hline
+{\em e} & etiqueta del nuevo nodo.\\
+\hline
+\end{DoxyParams}
+Desconecta y destruye el subárbol a la izquierda de n, inserta un nuevo nodo con etiqueta e como hijo a la izquierda \hypertarget{classbintree_a17611b995af1d5421197d155e75e683f}{}\index{bintree@{bintree}!insert\+\_\+left@{insert\+\_\+left}}
+\index{insert\+\_\+left@{insert\+\_\+left}!bintree@{bintree}}
+\subsubsection[{insert\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::insert\+\_\+left (
+\begin{DoxyParamCaption}
+\item[{{\bf node}}]{n, }
+\item[{{\bf bintree}$<$ T $>$ \&}]{rama}
+\end{DoxyParamCaption}
+)}\label{classbintree_a17611b995af1d5421197d155e75e683f}
+
+
+Insertar un árbol como subárbol a la izquierda de un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo del receptor. n != nodo\+\_\+nulo. \\
+\hline
+{\em rama} & subárbol que se inserta. Es M\+O\+D\+I\+F\+I\+C\+A\+D\+O.\\
+\hline
+\end{DoxyParams}
+Desconecta y destruye el subárbol a la izquierda de n, le asigna el valor de rama como nuevo subárbol a la izquierda y rama se hace árbol nulo. \hypertarget{classbintree_a8f25464ce656370a6ab5d56ac56a3b5e}{}\index{bintree@{bintree}!insert\+\_\+right@{insert\+\_\+right}}
+\index{insert\+\_\+right@{insert\+\_\+right}!bintree@{bintree}}
+\subsubsection[{insert\+\_\+right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::insert\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{{\bf node}}]{n, }
+\item[{const T \&}]{e}
+\end{DoxyParamCaption}
+)}\label{classbintree_a8f25464ce656370a6ab5d56ac56a3b5e}
+
+
+Insertar un nodo como hijo a la derecha de un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo del receptor. !n.Nulo(). \\
+\hline
+{\em e} & etiqueta del nuevo nodo.\\
+\hline
+\end{DoxyParams}
+Desconecta y destruye el subárbol a la derecha de n, inserta un nuevo nodo con etiqueta e como hijo a la derecha \hypertarget{classbintree_a01c798112c64624e3e90ed027bfd76e1}{}\index{bintree@{bintree}!insert\+\_\+right@{insert\+\_\+right}}
+\index{insert\+\_\+right@{insert\+\_\+right}!bintree@{bintree}}
+\subsubsection[{insert\+\_\+right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::insert\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{{\bf node}}]{n, }
+\item[{{\bf bintree}$<$ T $>$ \&}]{rama}
+\end{DoxyParamCaption}
+)}\label{classbintree_a01c798112c64624e3e90ed027bfd76e1}
+
+
+Insertar un árbol como subárbol a la derecha de un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo del receptor. !n.Nulo(). \\
+\hline
+{\em rama} & subárbol que se inserta. Es M\+O\+D\+I\+F\+I\+C\+A\+D\+O.\\
+\hline
+\end{DoxyParams}
+Desconecta y destruye el subárbol a la izquierda de n, le asigna el valor de rama como nuevo subárbol a la derecha y rama se hace árbol nulo. \hypertarget{classbintree_a80e397f887ebad1ef974ec7722430a6c}{}\index{bintree@{bintree}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!bintree@{bintree}}
+\subsubsection[{operator"!=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf bintree}$<$ T $>$\+::operator!= (
+\begin{DoxyParamCaption}
+\item[{const {\bf bintree}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a80e397f887ebad1ef974ec7722430a6c}
+
+
+Operador de comparación de desigualdad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & árbol con que se compara el receptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, si el receptor no es igual, en estructura o etiquetas a a. false, en otro caso. 
+\end{DoxyReturn}
+\hypertarget{classbintree_a188622dd3846630d2f69b11a2eba3896}{}\index{bintree@{bintree}!operator=@{operator=}}
+\index{operator=@{operator=}!bintree@{bintree}}
+\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf bintree}$<$ T $>$ \& {\bf bintree}$<$ T $>$\+::operator= (
+\begin{DoxyParamCaption}
+\item[{const {\bf bintree}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a188622dd3846630d2f69b11a2eba3896}
+
+
+Operador de asignación. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & árbol que se asigna.\\
+\hline
+\end{DoxyParams}
+Destruye el contenido previo del receptor y le asigna un duplicado de a. \hypertarget{classbintree_a29438cd817b1d27ccc10d46676ba6bef}{}\index{bintree@{bintree}!operator==@{operator==}}
+\index{operator==@{operator==}!bintree@{bintree}}
+\subsubsection[{operator==}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ bool {\bf bintree}$<$ T $>$\+::operator== (
+\begin{DoxyParamCaption}
+\item[{const {\bf bintree}$<$ T $>$ \&}]{a}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a29438cd817b1d27ccc10d46676ba6bef}
+
+
+Operador de comparación de igualdad. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & árbol con que se compara el receptor.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, si el receptor es igual, en estructura y etiquetas a a. false, en otro caso. 
+\end{DoxyReturn}
+\hypertarget{classbintree_a74b4b7570b9b574391742f892520562b}{}\index{bintree@{bintree}!prune\+\_\+left@{prune\+\_\+left}}
+\index{prune\+\_\+left@{prune\+\_\+left}!bintree@{bintree}}
+\subsubsection[{prune\+\_\+left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::prune\+\_\+left (
+\begin{DoxyParamCaption}
+\item[{{\bf node}}]{n, }
+\item[{{\bf bintree}$<$ T $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a74b4b7570b9b574391742f892520562b}
+
+
+Podar el subárbol a la izquierda de un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo del receptor. !n.null(). \\
+\hline
+{\em dest} & subárbol a la izquierda de n. Es M\+O\+D\+I\+F\+I\+C\+A\+D\+O.\\
+\hline
+\end{DoxyParams}
+Desconecta el subárbol a la izquierda de n, que pasa a ser un árbol nulo. El subárbol anterior se devuelve sobre dest. \hypertarget{classbintree_ae468b92dd3eb70818ffbd969ff34d811}{}\index{bintree@{bintree}!prune\+\_\+right@{prune\+\_\+right}}
+\index{prune\+\_\+right@{prune\+\_\+right}!bintree@{bintree}}
+\subsubsection[{prune\+\_\+right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::prune\+\_\+right (
+\begin{DoxyParamCaption}
+\item[{{\bf node}}]{n, }
+\item[{{\bf bintree}$<$ T $>$ \&}]{dest}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_ae468b92dd3eb70818ffbd969ff34d811}
+
+
+Podar el subárbol a la derecha de un nodo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & nodo del receptor. !n.null(). \\
+\hline
+{\em dest} & subárbol a la derecha de n. Es M\+O\+D\+I\+F\+I\+C\+A\+D\+O.\\
+\hline
+\end{DoxyParams}
+Desconecta el subárbol a la derecha de n, que pasa a ser un árbol nulo. El subárbol anterior se devuelve sobre dest. \hypertarget{classbintree_a75647277e4d20981651450e86ffad165}{}\index{bintree@{bintree}!replace\+\_\+subtree@{replace\+\_\+subtree}}
+\index{replace\+\_\+subtree@{replace\+\_\+subtree}!bintree@{bintree}}
+\subsubsection[{replace\+\_\+subtree}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ void {\bf bintree}$<$ T $>$\+::replace\+\_\+subtree (
+\begin{DoxyParamCaption}
+\item[{{\bf node}}]{pos, }
+\item[{const {\bf bintree}$<$ T $>$ \&}]{a, }
+\item[{{\bf node}}]{n}
+\end{DoxyParamCaption}
+)}\label{classbintree_a75647277e4d20981651450e86ffad165}
+
+
+Reemplaza el subárbol a partir de pos por una copia de subárbol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & nodo a partir del que se colagar� la copia \\
+\hline
+{\em a} & Arbol desde el que se copia. \\
+\hline
+{\em n} & nodo raíz del subárbol que se copia.\\
+\hline
+\end{DoxyParams}
+El receptor se modifica colocando a partir de pos una copia del subárbol de a cuya raíz es n. \hypertarget{classbintree_aa5d9c32204880ba5df3b31836d8720da}{}\index{bintree@{bintree}!root@{root}}
+\index{root@{root}!bintree@{bintree}}
+\subsubsection[{root}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf bintree}$<$ T $>$\+::{\bf node} {\bf bintree}$<$ T $>$\+::root (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_aa5d9c32204880ba5df3b31836d8720da}
+
+
+Obtener el nodo raíz. 
+
+\begin{DoxyReturn}{Returns}
+nodo raíz del receptor. 
+\end{DoxyReturn}
+\hypertarget{classbintree_a05abb18037587082a67fb4d4d2f5733f}{}\index{bintree@{bintree}!size@{size}}
+\index{size@{size}!bintree@{bintree}}
+\subsubsection[{size}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf bintree}$<$ T $>$\+::size\+\_\+type {\bf bintree}$<$ T $>$\+::size (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+) const\hspace{0.3cm}{\ttfamily [inline]}}\label{classbintree_a05abb18037587082a67fb4d4d2f5733f}
+
+
+Obtiene el número de nodos. 
+
+\begin{DoxyReturn}{Returns}
+número de nodos del receptor. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bintree.\+h\item 
+bintree.\+hxx\end{DoxyCompactItemize}

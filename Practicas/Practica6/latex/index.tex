@@ -1,0 +1,127 @@
+\begin{DoxyVersion}{Version}
+v0 
+\end{DoxyVersion}
+\begin{DoxyAuthor}{Author}
+Juan F. Huete
+\end{DoxyAuthor}
+\hypertarget{index_Objetivo}{}\section{Objetivo}\label{index_Objetivo}
+El objetivo de la práctica es que el alumno practique con el tipo de dato abstracto árbol, en concreto con los árboles binarios utilizando la implementación de bintree que se encuentra en la página de la asignatura. En concreto se pide entregar una implementación del T\+D\+A A\+V\+L, donde se deben seguir la misma especificación del set de la S\+T\+L.\hypertarget{index_wiki}{}\subsection{Según Wikipedia ...}\label{index_wiki}
+El árbol A\+V\+L toma su nombre de las iniciales de los apellidos de sus inventores, Georgii Adelson-\/\+Velskii y Yevgeniy Landis. Lo dieron a conocer en la publicación de un artículo en 1962, «\+An algorithm for the organization of information» («\+Un algoritmo para la organización de la información»).
+
+
+\begin{DoxyCode}
+ver mas en https:\textcolor{comment}{//es.wikipedia.org/wiki/Árbol\_AVL}
+\end{DoxyCode}
+ \hypertarget{index_Fecha}{}\section{Entrega}\label{index_Fecha}
+La fecha de entrega de la práctica es el día 22 de Enero de 2016.\hypertarget{index_Documentacion}{}\section{Arboles Balanceados A\+V\+L}\label{index_Documentacion}
+El tiempo requerido para realizar las operaciones de inserción, búsqueda y borrado en un árbol binario de búsqueda es proporcional a la longitud del camino (número de arcos) que hay desde la raíz hasta la hoja. En el caso en que el árbol esté balanceado el número de arcos es del orden O(log n), sin embargo cuando consideramos la inserción estándar en un árbol binario de búsqueda no hay nada que evite que la estructura resultante pueda quedar completamente desbalanceada. En esta situación, como por ejemplo lo es la tipología resultante cuando se insertan en un A\+B\+B un conjunto de elementos ordenados, el árbol no es más que una estructura de lista enlazada, siendo el camino de la raíz a la hoja proporcional al número de nodos, esto es O(n).
+
+Para poder asegurar que dichas operaciones se realicen de forma eficiente (O(log n)) debemos de asegurarnos que el árbol resultante este lo más balanceado posible.
+
+Podemos pensar en distintos criterios para definir el balanceo de un árbol binario, por ejemplo\+:
+
+\begin{DoxyItemize}
+\item El subárbol izquierdo y derecho de la raíz tengan el mismo número de nodos o, de forma alternativa, la misma altura. Estas son condiciones muy débiles y podemos encontrar de forma fácil contraejemplos que nos muestren que la estructura del árbol no está correctamente balancedo.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Una alternativa sería exigir que la anterior propiedad se cumpla para todos los nodos, esto es, los subárboles izquierdo y derecho de C\+A\+D\+A nodo tengan el mismo número de nodos o, de forma alternativa, la misma altura. Esta condición si nos garantiza tener la estructura balanceda, sin embargo es demasiado restrictiva pues sólo se puede cumplir para el caso de árbol binario perfecto.\end{DoxyItemize}
+\begin{DoxyItemize}
+\item Por tanto podemos relajar la condición de equilibrio, exigindo lo que se denomina condición A\+V\+L\+: La diferencia entre al altura del hijo izquierda y derecha de cada nodo del árbol es como mucho de 1, esto es\+:\end{DoxyItemize}
+
+\begin{DoxyCode}
+Para cada nodo x,  -1 <=  balanceo(x)   <= 1
+donde  balanceo(node) = altura(node.left() ) - altura(node.right()).
+\end{DoxyCode}
+
+
+Si garantizamos la condición de A\+V\+L la estructura resultante tiene una altura del orden O(log n). Esto lo podemos ver si tenemos en cuenta que el número mínimo de nodos en un A\+V\+L de altura h, M(h), se determina considerando la siguiente ecuación recurrente\+:
+
+\[ M(h) = M(h-1)+M(h-2) +1, \mbox{ con } M(-1) = 0 \mbox{ y } M(0) = 1. \]
+
+La solución a esta ecuación de recurrencia es $M(h) = 1.62^h$.
+
+Esta es una propiedad interesante, mucho más si tenemos en cuenta que tras las operaciones de inserción y borrado que puedan desbalancear un árbol, la condición de A\+V\+L puede recuperarse de forma conveniente (mediante operaciones de orden constante, O(1)) realizando rotaciones simples y dobles, sin que por ello se vea afectada la propiedad de ser un árbol binario de búsqueda.
+
+Para conocer cuando realizar una rotación, es necesario conocer la altura del nodo. Una primera posibilidad sería calcular dicho valor cuando sea necesario, sin embargo esto reduciría considerablemente la eficiencia de los algoritmos de inserción y/o borrado. En su lugar, lo que haremos será almacenar en cada nodo, además de la información asociada al tipo de dato para el que se particulariza en T\+D\+A, la altura del nodo (de forma alternativa se podría también almancenar el factor de balanceo), esto es
+
+
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T, ...>
+\textcolor{keyword}{class }AVL \{
+\textcolor{keyword}{typedef} \textcolor{keywordtype}{int} altura;
+....
+
+\textcolor{keyword}{private}:
+  \textcolor{comment}{// Metodos privados}
+   altura h(\hyperlink{classbintree}{bintree}<pair<T,altura> >::node & n);
+   altura h(\hyperlink{classbintree}{bintree}<pair<T,altura> >::const\_node & n);
+ \textcolor{comment}{// Representacion}
+  \hyperlink{classbintree}{bintree <pair<T,altura>} > el\_avl;
+\};
+\end{DoxyCode}
+
+
+Por tanto en todo momento podremos conocer la altura de un nodo utilizando el método h(n), además supondremos que tenemos el método \char`\"{}balancear\char`\"{} que será el encargado de realizar las operaciones necesarias para asegurar que la estructura resultante siga siendo un A\+V\+L. Así si tras realizar una inserción o borrado nos encontramos que el factor de balanceo es por ejemplo 2, debemos de determinar qué tipo de rotación debemos hacer, simple o doble, y una vez rebalanceado debemos de actualizar la altura de la estructura resultante.
+
+Pasaremos a describir de forma simple los procesos de inserción y borrado. En cualquier caso se recomienda mirar las transparencias de clase.\hypertarget{index_Insercion}{}\section{Inserción}\label{index_Insercion}
+La inserción se realiza como la inserción normal en un árbol binario de búsqueda, A\+B\+B, pero se añade un proceso de chequeo de balanceo para cada nodo n en el camino que conecta el nuevo nodo insertado con la raíz comprobando uno de los siguientes 4 casos (sólo puede ocurrir uno de ellos)
+
+\begin{DoxyItemize}
+\item n.\+left().left() es demasiado alto ==$>$ rotación simple a la derecha \item n.\+left().right() es demasiado alto ==$>$ rotación doble izquierda -\/ derecha \item n.\+right().right() es demasidado alto ==$>$ rotación simple a la izquierda \item n.\+right().left() es demasiado alto ==$>$ rotación doble derecha -\/ izquierda\end{DoxyItemize}
+Determinar cada uno de estos casos nos ayuda a decidir el tipo de rotación (simple o doble). Más aun, en el momento en que se realiza la primera rotación podemos asegurar que la estructura resultante ya está balanceada, esto es para todos los ancestros se cumple la condición de balanceo A\+V\+L, ya que el árbol estaba balanceado antes de la inserción del nuevo elemento.\hypertarget{index_Borrar}{}\section{Borrado en A\+V\+L}\label{index_Borrar}
+Al igual que se realiza el proceso de inserción, el borrado requiere borrar los elementos como un A\+B\+B normal. Recordad que el proceso de borrado en A\+B\+B siempre afecta a la estructura del árbol para un nodo que tiene cero (hoja) o un único hijo.
+
+Si consideramos que eliminamos un nodo hoja la condición de desbalanceo debe ocurrir necesariamente en algún nodo en el camino que va desde su padre hasta la raíz del árbol, por lo que debemos de asegurar que se cumple la condición de balanceo para cada uno de estos nodos (no olvidemos cambiar la altura de los nodos en el proceso). Debemos de tener en cuenta que en el caso del borrado puede ocurrir que exista más de un nodo que necesite ser rebalanceado ya que al rotar un nodo puede propagar la diferencia de altura a sus ancestros. Esto no es un problema ya que repetiremos el proceso para todos los nodos que nos encontremos en el camino a la raíz.\hypertarget{index_tda}{}\section{T\+D\+A A\+V\+L}\label{index_tda}
+Como hemos dicho, el tipo de dato a implementar será el T\+D\+A A\+V\+L que seguirá una especificiación similar a la que tenemos en el set de la stl. Por tanto, sólo indicaremos los nombres de los métodos que se tienen que implementar, la especificación de cada uno de ellos la podremos rescatar del set, por lo que\+:
+
+\begin{DoxyItemize}
+\item No existen elementos repetidos \item T representa al tipo de dato sobre el que queremos instanciar el A\+V\+L. \item comparar debe ser un predicado binario que define un orden estricto sobre los elementos de T, donde $ comp(x,y) $ es cierto si x precede a y en el orden definido.\end{DoxyItemize}
+
+\begin{DoxyCode}
+\textcolor{keyword}{template} <\textcolor{keyword}{typename} T, \textcolor{keyword}{class} comparar=less<T> >
+\textcolor{keyword}{class }AVL \{
+\textcolor{keyword}{public}:
+\textcolor{comment}{// entre otros deberemos implementar los siguientes métodos, para los que debemos darle el mismo
+       funcionamiento que viene indicado en la clase set}
+
+\textcolor{comment}{//constructores}
+avl ...
+\textcolor{comment}{//operador de asignacion}
+opeator=  ...
+\textcolor{comment}{//iteradores}
+begin  ...
+end ...
+rbegin ...
+rend ...
+cbegin  ...
+cend  ...
+crbegin  ...
+crend  ...
+
+\textcolor{comment}{//Capacidad}
+empty ...
+size ...
+
+\textcolor{comment}{//Modificadores:}
+insert  ...
+erase ...
+swap  ...
+clear  ...
+
+\textcolor{comment}{//Operaciones:}
+find  ...
+lower\_bound  ...
+upper\_bound  ...
+
+private:
+  \textcolor{comment}{// Metodos privados}
+   altura h(\hyperlink{classbintree}{bintree}<pair<T,altura> >::node & n);
+   altura h(\hyperlink{classbintree}{bintree}<pair<T,altura> >::const\_node & n);
+   .... 
+
+ \textcolor{comment}{// Representacion}
+  \hyperlink{classbintree}{bintree <pair<T,altura>} > el\_avl;
+  \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} tama;
+  comparar cmp;
+\};
+\end{DoxyCode}
+ 
